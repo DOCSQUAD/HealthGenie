@@ -1,0 +1,67 @@
+[{
+	"System": "System 1",
+	"DateTo": "/Date(1519198889000)/",
+	"DateFrom": "/Date(1498462889000)/",
+	"ReqCount": 60,
+	"Action": "Yoga",
+	"TotalCount": 1120,
+	"__metadata": {
+		"uri": "UarStatusSet('System%201')",
+		"type": "GRC_ARQ_OVP_SRV.UarStatus"
+	}
+}, {
+	"System": "System 2",
+	"DateTo": "/Date(1068536489000)/",
+	"DateFrom": "/Date(1316072489000)/",
+	"ReqCount": 250,
+	"Action": "Meditation",
+	"TotalCount": 1120,
+	"__metadata": {
+		"uri": "UarStatusSet('System%202')",
+		"type": "GRC_ARQ_OVP_SRV.UarStatus"
+	}
+}, {
+	"System": "System 3",
+	"DateTo": "/Date(1119598889000)/",
+	"DateFrom": "/Date(1045381289000)/",
+	"ReqCount": 115,
+	"Action": "Walking",
+	"TotalCount": 1120,
+	"__metadata": {
+		"uri": "UarStatusSet('System%203')",
+		"type": "GRC_ARQ_OVP_SRV.UarStatus"
+	}
+}, {
+	"System": "System 4",
+	"DateTo": "/Date(1047368489000)/",
+	"DateFrom": "/Date(1540626089000)/",
+	"ReqCount": 435,
+	"Action": "Dance Fitness",
+	"TotalCount": 1120,
+	"__metadata": {
+		"uri": "UarStatusSet('System%204')",
+		"type": "GRC_ARQ_OVP_SRV.UarStatus"
+	}
+}, {
+	"System": "System 5",
+	"DateTo": "/Date(1132386089000)/",
+	"DateFrom": "/Date(1183102889000)/",
+	"ReqCount": 40,
+	"Action": "Hobby",
+	"TotalCount": 1120,
+	"__metadata": {
+		"uri": "UarStatusSet('System%205')",
+		"type": "GRC_ARQ_OVP_SRV.UarStatus"
+	}
+}, {
+	"System": "System 6",
+	"DateTo": "/Date(1476430889000)/",
+	"DateFrom": "/Date(1384846889000)/",
+	"ReqCount": 220,
+	"Action": "Running",
+	"TotalCount": 1120,
+	"__metadata": {
+		"uri": "UarStatusSet('System%206')",
+		"type": "GRC_ARQ_OVP_SRV.UarStatus"
+	}
+}]

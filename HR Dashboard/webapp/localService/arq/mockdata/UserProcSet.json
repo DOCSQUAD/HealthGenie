@@ -1,0 +1,34 @@
+[{
+	"System": "System 1",
+	"DateTo": "/Date(1569224138000)/",
+	"DateFrom": "/Date(989048138000)/",
+	"ReqCount": 3200000,
+	"Action": "AIS",
+	"TotalCount": 6425000,
+	"__metadata": {
+		"uri": "UserProcSet('System%201')",
+		"type": "GRC_ARQ_OVP_SRV.UserProc"
+	}
+}, {
+	"System": "System 2",
+	"DateTo": "/Date(1279870538000)/",
+	"DateFrom": "/Date(970472138000)/",
+	"ReqCount": 1200000,
+	"Action": "GS",
+	"TotalCount": 6425000,
+	"__metadata": {
+		"uri": "UserProcSet('System%202')",
+		"type": "GRC_ARQ_OVP_SRV.UserProc"
+	}
+}, {
+	"System": "System 3",
+	"DateTo": "/Date(1128152138000)/",
+	"DateFrom": "/Date(1016264138000)/",
+	"ReqCount": 2025000,
+	"Action": "ICD",
+	"TotalCount": 6425000,
+	"__metadata": {
+		"uri": "UserProcSet('System%203')",
+		"type": "GRC_ARQ_OVP_SRV.UserProc"
+	}
+}]

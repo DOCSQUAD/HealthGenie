@@ -1,0 +1,89 @@
+[{
+	"System": "System 1",
+	"DateFrom": "/Date(1557733204000)/",
+	"DateTo": "/Date(1025250004000)/",
+	"ReqCount": 1110,
+	"Action": "Not Risky",
+	"Period": "Q1 2020",
+	"__metadata": {
+		"uri": "UarHistorySet('System%201')",
+		"type": "GRC_ARQ_OVP_SRV.UarHistory"
+	}
+}, {
+	"System": "System 2",
+	"DateFrom": "/Date(1007970004000)/",
+	"DateTo": "/Date(1529653204000)/",
+	"ReqCount": 1254,
+	"Action": "Not Risky",
+	"Period": "Q2 2020",
+	"__metadata": {
+		"uri": "UarHistorySet('System%202')",
+		"type": "GRC_ARQ_OVP_SRV.UarHistory"
+	}
+}, {
+	"System": "System 3",
+	"DateFrom": "/Date(967794004000)/",
+	"DateTo": "/Date(1393573204000)/",
+	"ReqCount": 2150,
+	"Action": "Not Risky",
+	"Period": "Q3 2020",
+	"__metadata": {
+		"uri": "UarHistorySet('System%203')",
+		"type": "GRC_ARQ_OVP_SRV.UarHistory"
+	}
+}, {
+	"System": "System 4",
+	"DateFrom": "/Date(1186386004000)/",
+	"DateTo": "/Date(1169624404000)/",
+	"ReqCount": 2440,
+	"Action": "Not Risky",
+	"Period": "Q4 2020",
+	"__metadata": {
+		"uri": "UarHistorySet('System%204')",
+		"type": "GRC_ARQ_OVP_SRV.UarHistory"
+	}
+}, {
+	"System": "System 5",
+	"DateFrom": "/Date(1386229204000)/",
+	"DateTo": "/Date(1095320404000)/",
+	"ReqCount": 3890,
+	"Action": "Risky",
+	"Period": "Q1 2020",
+	"__metadata": {
+		"uri": "UarHistorySet('System%205')",
+		"type": "GRC_ARQ_OVP_SRV.UarHistory"
+	}
+}, {
+	"System": "System 6",
+	"DateFrom": "/Date(1259912404000)/",
+	"DateTo": "/Date(1336808404000)/",
+	"ReqCount": 3746,
+	"Action": "Risky",
+	"Period": "Q2 2020",
+	"__metadata": {
+		"uri": "UarHistorySet('System%206')",
+		"type": "GRC_ARQ_OVP_SRV.UarHistory"
+	}
+}, {
+	"System": "System 7",
+	"DateFrom": "/Date(1542872404000)/",
+	"DateTo": "/Date(1185262804000)/",
+	"ReqCount": 2850,
+	"Action": "Risky",
+	"Period": "Q3 2020",
+	"__metadata": {
+		"uri": "UarHistorySet('System%207')",
+		"type": "GRC_ARQ_OVP_SRV.UarHistory"
+	}
+}, {
+	"System": "System 8",
+	"DateFrom": "/Date(1126770004000)/",
+	"DateTo": "/Date(988962004000)/",
+	"ReqCount": 2560,
+	"Action": "Risky",
+	"Period": "Q4 2020",
+	"__metadata": {
+		"uri": "UarHistorySet('System%208')",
+		"type": "GRC_ARQ_OVP_SRV.UarHistory"
+	}
+}]

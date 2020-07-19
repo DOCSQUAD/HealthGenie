@@ -1,0 +1,89 @@
+[{
+	"System": "System 1",
+	"DateFrom": "/Date(1315985705000)/",
+	"DateTo": "/Date(1528356905000)/",
+	"__metadata": {
+		"uri": "FilterSet('System%201')",
+		"type": "GRC_ARQ_OVP_SRV.Filter"
+	}
+}, {
+	"System": "System 2",
+	"DateFrom": "/Date(1006846505000)/",
+	"DateTo": "/Date(1531121705000)/",
+	"__metadata": {
+		"uri": "FilterSet('System%202')",
+		"type": "GRC_ARQ_OVP_SRV.Filter"
+	}
+}, {
+	"System": "System 3",
+	"DateFrom": "/Date(1363246505000)/",
+	"DateTo": "/Date(1408779305000)/",
+	"__metadata": {
+		"uri": "FilterSet('System%203')",
+		"type": "GRC_ARQ_OVP_SRV.Filter"
+	}
+}, {
+	"System": "System 4",
+	"DateFrom": "/Date(947835305000)/",
+	"DateTo": "/Date(981876905000)/",
+	"__metadata": {
+		"uri": "FilterSet('System%204')",
+		"type": "GRC_ARQ_OVP_SRV.Filter"
+	}
+}, {
+	"System": "System 5",
+	"DateFrom": "/Date(1146814505000)/",
+	"DateTo": "/Date(1425195305000)/",
+	"__metadata": {
+		"uri": "FilterSet('System%205')",
+		"type": "GRC_ARQ_OVP_SRV.Filter"
+	}
+}, {
+	"System": "System 6",
+	"DateFrom": "/Date(1042097705000)/",
+	"DateTo": "/Date(1302420905000)/",
+	"__metadata": {
+		"uri": "FilterSet('System%206')",
+		"type": "GRC_ARQ_OVP_SRV.Filter"
+	}
+}, {
+	"System": "System 7",
+	"DateFrom": "/Date(1546932905000)/",
+	"DateTo": "/Date(1556523305000)/",
+	"__metadata": {
+		"uri": "FilterSet('System%207')",
+		"type": "GRC_ARQ_OVP_SRV.Filter"
+	}
+}, {
+	"System": "System 8",
+	"DateFrom": "/Date(970126505000)/",
+	"DateTo": "/Date(1266651305000)/",
+	"__metadata": {
+		"uri": "FilterSet('System%208')",
+		"type": "GRC_ARQ_OVP_SRV.Filter"
+	}
+}, {
+	"System": "System 9",
+	"DateFrom": "/Date(1540452905000)/",
+	"DateTo": "/Date(1557473705000)/",
+	"__metadata": {
+		"uri": "FilterSet('System%209')",
+		"type": "GRC_ARQ_OVP_SRV.Filter"
+	}
+}, {
+	"System": "System 10",
+	"DateFrom": "/Date(1465889705000)/",
+	"DateTo": "/Date(1145604905000)/",
+	"__metadata": {
+		"uri": "FilterSet('System%2010')",
+		"type": "GRC_ARQ_OVP_SRV.Filter"
+	}
+}, {
+	"System": "System 11",
+	"DateFrom": "/Date(1388514600000)/",
+	"DateTo": "/Date(1515436200000)/"
+}, {
+	"System": "System 12",
+	"DateFrom": "/Date(1420050600000)/",
+	"DateTo": "/Date(1515436200000)/"
+}]

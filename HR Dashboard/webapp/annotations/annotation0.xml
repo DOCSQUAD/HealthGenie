@@ -1,0 +1,856 @@
+<edmx:Edmx xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx" Version="4.0">
+	<edmx:Reference Uri="https://wiki.scn.sap.com/wiki/download/attachments/448470974/Common.xml?api=v2">
+		<edmx:Include Alias="Common" Namespace="com.sap.vocabularies.Common.v1"/>
+	</edmx:Reference>
+	<edmx:Reference Uri="https://wiki.scn.sap.com/wiki/download/attachments/448470968/UI.xml?api=v2">
+		<edmx:Include Alias="UI" Namespace="com.sap.vocabularies.UI.v1"/>
+	</edmx:Reference>
+	<edmx:Reference Uri="/sap/opu/odata/sap/GRC_ARQ_OVP_SRV/$metadata">
+		<edmx:Include Alias="Metadata" Namespace="GRC_ARQ_OVP_SRV"/>
+	</edmx:Reference>
+	<edmx:DataServices>
+		<Schema xmlns="http://docs.oasis-open.org/odata/ns/edm" Namespace="GRC_ARQ_OVP_Final1.annotations.annotation0.GRC_ARQ_OVP_SRV">
+			<Annotations Target="GRC_ARQ_OVP_SRV.Filter">
+				<Annotation Term="UI.SelectionFields" Qualifier="Filter">
+					<Collection>
+						<PropertyPath>System</PropertyPath>
+						<PropertyPath>DateFrom</PropertyPath>
+						<PropertyPath>DateTo</PropertyPath>
+					</Collection>
+				</Annotation>
+			</Annotations>
+			<Annotations Target="GRC_ARQ_OVP_SRV.RequestByStatus">
+				<Annotation Term="UI.SelectionVariant" Qualifier="Donut1SV">
+					<Record Type="UI.SelectionVariantType">
+						<PropertyValue Property="Parameters">
+							<Collection>
+								<Record Type="UI.Parameter">
+									<PropertyValue Property="PropertyName" PropertyPath="System"/>
+									<PropertyValue Property="PropertyValue" Path="System"/>
+								</Record>
+								<Record Type="UI.IntervalParameter">
+									<PropertyValue Property="PropertyNameFrom" PropertyPath="DateFrom"/>
+									<PropertyValue Property="PropertyValueFrom" Path="DateFrom"/>
+									<PropertyValue Property="PropertyNameTo" PropertyPath="DateTo"/>
+									<PropertyValue Property="PropertyValueTo" Path="DateTo"/>
+								</Record>
+							</Collection>
+						</PropertyValue>
+						<PropertyValue Property="SelectOptions">
+							<Collection>
+								<Record Type="UI.SelectOptionType">
+									<PropertyValue Property="PropertyName" PropertyPath="DateFrom"/>
+									<PropertyValue Property="Ranges">
+										<Collection>
+											<Record Type="UI.SelectionRangeType">
+												<PropertyValue Property="Sign" EnumMember="UI.SelectionRangeSignType/I"/>
+												<PropertyValue Property="Option" EnumMember="UI.SelectionRangeOptionType/BT"/>
+												<PropertyValue Property="Low" Path="DateFrom"/>
+												<PropertyValue Property="High" Path="DateTo"/>
+											</Record>
+										</Collection>
+									</PropertyValue>
+								</Record>
+								<Record Type="UI.SelectOptionType">
+									<PropertyValue Property="PropertyName" PropertyPath="System"/>
+									<PropertyValue Property="Ranges">
+										<Collection>
+											<Record Type="UI.SelectionRangeType">
+												<PropertyValue Property="Sign" EnumMember="UI.SelectionRangeSignType/I"/>
+												<PropertyValue Property="Option" EnumMember="UI.SelectionRangeOptionType/EQ"/>
+												<PropertyValue Property="Low" Path="System"/>
+											</Record>
+										</Collection>
+									</PropertyValue>
+								</Record>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+				<Annotation Term="UI.DataPoint" Qualifier="TotalCountStatus">
+					<Record Type="UI.DataPointType">
+						<PropertyValue Property="Title" String="Total Employees"/>
+						<PropertyValue Property="Value" Path="Total_Count"/>
+						<PropertyValue Property="ValueFormat">
+							<Record Type="UI.NumberFormat">
+								<PropertyValue Property="ScaleFactor" Decimal="500"/>
+								<PropertyValue Property="NumberOfFractionalDigits" Int="2"/>
+							</Record>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+				<Annotation Term="UI.PresentationVariant" Qualifier="Donut1PV">
+					<Record Type="UI.PresentationVariantType">
+						<PropertyValue Property="SortOrder">
+							<Collection>
+								<Record Type="Common.SortOrderType">
+									<PropertyValue Property="Property" PropertyPath="Count"/>
+									<PropertyValue Property="Descending" Bool="true"/>
+								</Record>
+							</Collection>
+						</PropertyValue>
+						<PropertyValue Property="GroupBy">
+							<Collection>
+								<PropertyPath>Count</PropertyPath>
+							</Collection>
+						</PropertyValue>
+						<PropertyValue Property="TotalBy">
+							<Collection>
+								<PropertyPath>Count</PropertyPath>
+							</Collection>
+						</PropertyValue>
+						<PropertyValue Property="Total">
+							<Collection>
+								<PropertyPath>Count</PropertyPath>
+							</Collection>
+						</PropertyValue>
+						<PropertyValue Property="Visualizations">
+							<Collection>
+								<AnnotationPath>@UI.Chart#Donut1</AnnotationPath>
+							</Collection>
+						</PropertyValue>
+						<PropertyValue Property="RequestAtLeast">
+							<Collection/>
+						</PropertyValue>
+						<PropertyValue Property="MaxItems" Int="5"/>
+						<PropertyValue Property="IncludeGrandTotal" Bool="false"/>
+					</Record>
+				</Annotation>
+				<Annotation Term="UI.Chart" Qualifier="Donut1">
+					<Record Type="UI.ChartDefinitionType">
+						<PropertyValue Property="ChartType" EnumMember="UI.ChartType/Donut"/>
+						<PropertyValue Property="Measures">
+							<Collection>
+								<PropertyPath>Count</PropertyPath>
+							</Collection>
+						</PropertyValue>
+						<PropertyValue Property="MeasureAttributes">
+							<Collection>
+								<Record Type="UI.ChartMeasureAttributeType">
+									<PropertyValue Property="Measure" PropertyPath="Count"/>
+									<PropertyValue Property="Role" EnumMember="UI.ChartMeasureRoleType/Axis1"/>
+								</Record>
+							</Collection>
+						</PropertyValue>
+						<PropertyValue Property="Dimensions">
+							<Collection>
+								<PropertyPath>Status</PropertyPath>
+							</Collection>
+						</PropertyValue>
+						<PropertyValue Property="DimensionAttributes">
+							<Collection>
+								<Record Type="UI.ChartDimensionAttributeType">
+									<PropertyValue Property="Dimension" PropertyPath="Status"/>
+									<PropertyValue Property="Role" EnumMember="UI.ChartDimensionRoleType/Category"/>
+								</Record>
+							</Collection>
+						</PropertyValue>
+						<PropertyValue Property="Actions"/>
+					</Record>
+				</Annotation>
+			</Annotations>
+			<Annotations Target="GRC_ARQ_OVP_SRV.AssignProc">
+				<Annotation Term="UI.Chart" Qualifier="Bar1">
+					<Record Type="UI.ChartDefinitionType">
+						<PropertyValue Property="ChartType" EnumMember="UI.ChartType/Bar"/>
+						<PropertyValue Property="Measures">
+							<Collection>
+								<PropertyPath>ReqCount</PropertyPath>
+							</Collection>
+						</PropertyValue>
+						<PropertyValue Property="MeasureAttributes">
+							<Collection>
+								<Record Type="UI.ChartMeasureAttributeType">
+									<PropertyValue Property="Measure" PropertyPath="ReqCount"/>
+									<PropertyValue Property="Role" EnumMember="UI.ChartMeasureRoleType/Axis1"/>
+								</Record>
+							</Collection>
+						</PropertyValue>
+						<PropertyValue Property="Dimensions">
+							<Collection>
+								<PropertyPath>Action</PropertyPath>
+							</Collection>
+						</PropertyValue>
+						<PropertyValue Property="DimensionAttributes">
+							<Collection>
+								<Record Type="UI.ChartDimensionAttributeType">
+									<PropertyValue Property="Dimension" PropertyPath="Action"/>
+									<PropertyValue Property="Role" EnumMember="UI.ChartDimensionRoleType/Category"/>
+								</Record>
+							</Collection>
+						</PropertyValue>
+						<PropertyValue Property="Actions"/>
+					</Record>
+				</Annotation>
+				<Annotation Term="UI.PresentationVariant" Qualifier="Bar1PV">
+					<Record Type="UI.PresentationVariantType">
+						<PropertyValue Property="SortOrder">
+							<Collection>
+								<Record Type="Common.SortOrderType">
+									<PropertyValue Property="Property" PropertyPath="ReqCount"/>
+									<PropertyValue Property="Descending" Bool="true"/>
+								</Record>
+							</Collection>
+						</PropertyValue>
+						<PropertyValue Property="GroupBy"/>
+						<PropertyValue Property="TotalBy"/>
+						<PropertyValue Property="Total"/>
+						<PropertyValue Property="Visualizations">
+							<Collection>
+								<AnnotationPath>@UI.Chart#Bar1</AnnotationPath>
+							</Collection>
+						</PropertyValue>
+						<PropertyValue Property="RequestAtLeast"/>
+						<PropertyValue Property="IncludeGrandTotal" Bool="true"/>
+					</Record>
+				</Annotation>
+				<Annotation Term="UI.DataPoint" Qualifier="TotalCountAssign">
+					<Record Type="UI.DataPointType">
+						<PropertyValue Property="Title" String="Requests"/>
+						<PropertyValue Property="Value" Path="TotalCount"/>
+						<PropertyValue Property="ValueFormat">
+							<Record Type="UI.NumberFormat">
+								<PropertyValue Property="ScaleFactor" Decimal="1000"/>
+								<PropertyValue Property="NumberOfFractionalDigits" Int="3"/>
+							</Record>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+				<Annotation Term="UI.SelectionVariant" Qualifier="Bar1SV">
+					<Record Type="UI.SelectionVariantType">
+						<PropertyValue Property="Parameters">
+							<Collection>
+								<Record Type="UI.IntervalParameter">
+									<PropertyValue Property="PropertyNameFrom" PropertyPath="DateFrom"/>
+									<PropertyValue Property="PropertyValueFrom" Path="DateFrom"/>
+									<PropertyValue Property="PropertyNameTo" PropertyPath="DateTo"/>
+									<PropertyValue Property="PropertyValueTo" Path="DateTo"/>
+								</Record>
+								<Record Type="UI.Parameter">
+									<PropertyValue Property="PropertyName" PropertyPath="System"/>
+									<PropertyValue Property="PropertyValue" Path="System"/>
+								</Record>
+							</Collection>
+						</PropertyValue>
+						<PropertyValue Property="SelectOptions">
+							<Collection>
+								<Record Type="UI.SelectOptionType">
+									<PropertyValue Property="PropertyName" PropertyPath="DateFrom"/>
+									<PropertyValue Property="Ranges">
+										<Collection>
+											<Record Type="UI.SelectionRangeType">
+												<PropertyValue Property="Sign" EnumMember="UI.SelectionRangeSignType/I"/>
+												<PropertyValue Property="Option" EnumMember="UI.SelectionRangeOptionType/BT"/>
+												<PropertyValue Property="Low" Path="DateFrom"/>
+												<PropertyValue Property="High" Path="DateTo"/>
+											</Record>
+										</Collection>
+									</PropertyValue>
+								</Record>
+								<Record Type="UI.SelectOptionType">
+									<PropertyValue Property="PropertyName" PropertyPath="System"/>
+									<PropertyValue Property="Ranges">
+										<Collection>
+											<Record Type="UI.SelectionRangeType">
+												<PropertyValue Property="Sign" EnumMember="UI.SelectionRangeSignType/I"/>
+												<PropertyValue Property="Option" EnumMember="UI.SelectionRangeOptionType/EQ"/>
+												<PropertyValue Property="Low" Path="System"/>
+											</Record>
+										</Collection>
+									</PropertyValue>
+								</Record>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+			</Annotations>
+			<Annotations Target="GRC_ARQ_OVP_SRV.ReqByDueDate">
+				<Annotation Term="UI.SelectionVariant" Qualifier="Line1SV">
+					<Record Type="UI.SelectionVariantType">
+						<PropertyValue Property="Parameters">
+							<Collection>
+								<Record Type="UI.IntervalParameter">
+									<PropertyValue Property="PropertyNameFrom" PropertyPath="DateFrom"/>
+									<PropertyValue Property="PropertyValueFrom" Path="DateFrom"/>
+									<PropertyValue Property="PropertyNameTo" PropertyPath="DateTo"/>
+									<PropertyValue Property="PropertyValueTo" Path="DateTo"/>
+								</Record>
+								<Record Type="UI.Parameter">
+									<PropertyValue Property="PropertyName" PropertyPath="System"/>
+									<PropertyValue Property="PropertyValue" Path="System"/>
+								</Record>
+							</Collection>
+						</PropertyValue>
+						<PropertyValue Property="SelectOptions">
+							<Collection>
+								<Record Type="UI.SelectOptionType">
+									<PropertyValue Property="PropertyName" PropertyPath="DateFrom"/>
+									<PropertyValue Property="Ranges">
+										<Collection>
+											<Record Type="UI.SelectionRangeType">
+												<PropertyValue Property="Sign" EnumMember="UI.SelectionRangeSignType/I"/>
+												<PropertyValue Property="Option" EnumMember="UI.SelectionRangeOptionType/BT"/>
+												<PropertyValue Property="Low" Path="DateFrom"/>
+												<PropertyValue Property="High" Path="DateTo"/>
+											</Record>
+										</Collection>
+									</PropertyValue>
+								</Record>
+								<Record Type="UI.SelectOptionType">
+									<PropertyValue Property="PropertyName" PropertyPath="System"/>
+									<PropertyValue Property="Ranges">
+										<Collection>
+											<Record Type="UI.SelectionRangeType">
+												<PropertyValue Property="Sign" EnumMember="UI.SelectionRangeSignType/I"/>
+												<PropertyValue Property="Option" EnumMember="UI.SelectionRangeOptionType/EQ"/>
+												<PropertyValue Property="Low" Path="System"/>
+											</Record>
+										</Collection>
+									</PropertyValue>
+								</Record>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+				<Annotation Term="UI.PresentationVariant" Qualifier="Line1PV">
+					<Record Type="UI.PresentationVariantType">
+						<PropertyValue Property="SortOrder">
+							<Collection/>
+						</PropertyValue>
+						<PropertyValue Property="GroupBy">
+							<Collection>
+								<PropertyPath>ProcessID</PropertyPath>
+							</Collection>
+						</PropertyValue>
+						<PropertyValue Property="TotalBy">
+							<Collection>
+								<PropertyPath>ProcessID</PropertyPath>
+							</Collection>
+						</PropertyValue>
+						<PropertyValue Property="Total"/>
+						<PropertyValue Property="Visualizations">
+							<Collection>
+								<AnnotationPath>@UI.Chart#Line1</AnnotationPath>
+							</Collection>
+						</PropertyValue>
+						<PropertyValue Property="RequestAtLeast"/>
+					</Record>
+				</Annotation>
+				<Annotation Term="UI.Chart" Qualifier="Line1">
+					<Record Type="UI.ChartDefinitionType">
+						<PropertyValue Property="ChartType" EnumMember="UI.ChartType/Line"/>
+						<PropertyValue Property="Measures">
+							<Collection>
+								<PropertyPath>ReqCount</PropertyPath>
+							</Collection>
+						</PropertyValue>
+						<PropertyValue Property="MeasureAttributes">
+							<Collection>
+								<Record Type="UI.ChartMeasureAttributeType">
+									<PropertyValue Property="Measure" PropertyPath="ReqCount"/>
+									<PropertyValue Property="Role" EnumMember="UI.ChartMeasureRoleType/Axis1"/>
+								</Record>
+							</Collection>
+						</PropertyValue>
+						<PropertyValue Property="Dimensions">
+							<Collection>
+								<PropertyPath>MonthYear</PropertyPath>
+								<PropertyPath>ProcessID</PropertyPath>
+							</Collection>
+						</PropertyValue>
+						<PropertyValue Property="DimensionAttributes">
+							<Collection>
+								<Record Type="UI.ChartDimensionAttributeType">
+									<PropertyValue Property="Dimension" PropertyPath="MonthYear"/>
+									<PropertyValue Property="Role" EnumMember="UI.ChartDimensionRoleType/Category"/>
+								</Record>
+								<Record Type="UI.ChartDimensionAttributeType">
+									<PropertyValue Property="Dimension" PropertyPath="ProcessID"/>
+									<PropertyValue Property="Role" EnumMember="UI.ChartDimensionRoleType/Series"/>
+								</Record>
+							</Collection>
+						</PropertyValue>
+						<PropertyValue Property="Actions"/>
+					</Record>
+				</Annotation>
+			</Annotations>
+			<Annotations Target="GRC_ARQ_OVP_SRV.UserProc">
+				<Annotation Term="UI.Chart" Qualifier="Bar2">
+					<Record Type="UI.ChartDefinitionType">
+						<PropertyValue Property="ChartType" EnumMember="UI.ChartType/Bar"/>
+						<PropertyValue Property="Measures">
+							<Collection>
+								<PropertyPath>ReqCount</PropertyPath>
+							</Collection>
+						</PropertyValue>
+						<PropertyValue Property="MeasureAttributes">
+							<Collection>
+								<Record Type="UI.ChartMeasureAttributeType">
+									<PropertyValue Property="Measure" PropertyPath="ReqCount"/>
+									<PropertyValue Property="Role" EnumMember="UI.ChartMeasureRoleType/Axis1"/>
+								</Record>
+							</Collection>
+						</PropertyValue>
+						<PropertyValue Property="Dimensions">
+							<Collection>
+								<PropertyPath>Action</PropertyPath>
+							</Collection>
+						</PropertyValue>
+						<PropertyValue Property="DimensionAttributes">
+							<Collection>
+								<Record Type="UI.ChartDimensionAttributeType">
+									<PropertyValue Property="Dimension" PropertyPath="Action"/>
+									<PropertyValue Property="Role" EnumMember="UI.ChartDimensionRoleType/Category"/>
+								</Record>
+							</Collection>
+						</PropertyValue>
+						<PropertyValue Property="Actions"/>
+					</Record>
+				</Annotation>
+				<Annotation Term="UI.PresentationVariant" Qualifier="Bar2PV">
+					<Record Type="UI.PresentationVariantType">
+						<PropertyValue Property="SortOrder">
+							<Collection/>
+						</PropertyValue>
+						<PropertyValue Property="GroupBy"/>
+						<PropertyValue Property="TotalBy"/>
+						<PropertyValue Property="Total"/>
+						<PropertyValue Property="Visualizations">
+							<Collection>
+								<AnnotationPath>@UI.Chart#Bar2</AnnotationPath>
+							</Collection>
+						</PropertyValue>
+						<PropertyValue Property="RequestAtLeast"/>
+						<PropertyValue Property="IncludeGrandTotal" Bool="true"/>
+					</Record>
+				</Annotation>
+				<Annotation Term="UI.DataPoint" Qualifier="TotalCountUsers">
+					<Record Type="UI.DataPointType">
+						<PropertyValue Property="Title" String="Requests"/>
+						<PropertyValue Property="Value" Path="TotalCount"/>
+						<PropertyValue Property="ValueFormat">
+							<Record Type="UI.NumberFormat">
+								<PropertyValue Property="ScaleFactor" Decimal="1000"/>
+								<PropertyValue Property="NumberOfFractionalDigits" Int="3"/>
+							</Record>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+				<Annotation Term="UI.SelectionVariant" Qualifier="Bar2SV">
+					<Record Type="UI.SelectionVariantType">
+						<PropertyValue Property="Parameters">
+							<Collection>
+								<Record Type="UI.IntervalParameter">
+									<PropertyValue Property="PropertyNameFrom" PropertyPath="DateFrom"/>
+									<PropertyValue Property="PropertyValueFrom" Path="DateFrom"/>
+									<PropertyValue Property="PropertyNameTo" PropertyPath="DateTo"/>
+									<PropertyValue Property="PropertyValueTo" Path="DateTo"/>
+								</Record>
+								<Record Type="UI.Parameter">
+									<PropertyValue Property="PropertyName" PropertyPath="System"/>
+									<PropertyValue Property="PropertyValue" Path="System"/>
+								</Record>
+							</Collection>
+						</PropertyValue>
+						<PropertyValue Property="SelectOptions">
+							<Collection>
+								<Record Type="UI.SelectOptionType">
+									<PropertyValue Property="PropertyName" PropertyPath="DateFrom"/>
+									<PropertyValue Property="Ranges">
+										<Collection>
+											<Record Type="UI.SelectionRangeType">
+												<PropertyValue Property="Sign" EnumMember="UI.SelectionRangeSignType/I"/>
+												<PropertyValue Property="Option" EnumMember="UI.SelectionRangeOptionType/BT"/>
+												<PropertyValue Property="Low" Path="DateFrom"/>
+												<PropertyValue Property="High" Path="DateTo"/>
+											</Record>
+										</Collection>
+									</PropertyValue>
+								</Record>
+								<Record Type="UI.SelectOptionType">
+									<PropertyValue Property="PropertyName" PropertyPath="System"/>
+									<PropertyValue Property="Ranges">
+										<Collection>
+											<Record Type="UI.SelectionRangeType">
+												<PropertyValue Property="Sign" EnumMember="UI.SelectionRangeSignType/I"/>
+												<PropertyValue Property="Option" EnumMember="UI.SelectionRangeOptionType/EQ"/>
+												<PropertyValue Property="Low" Path="System"/>
+											</Record>
+										</Collection>
+									</PropertyValue>
+								</Record>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+			</Annotations>
+			<Annotations Target="GRC_ARQ_OVP_SRV.UarStatus">
+				<Annotation Term="UI.SelectionVariant" Qualifier="Donut2SV">
+					<Record Type="UI.SelectionVariantType">
+						<PropertyValue Property="Parameters">
+							<Collection>
+								<Record Type="UI.Parameter">
+									<PropertyValue Property="PropertyName" PropertyPath="System"/>
+									<PropertyValue Property="PropertyValue" Path="System"/>
+								</Record>
+								<Record Type="UI.IntervalParameter">
+									<PropertyValue Property="PropertyNameFrom" PropertyPath="DateFrom"/>
+									<PropertyValue Property="PropertyValueFrom" Path="DateFrom"/>
+									<PropertyValue Property="PropertyNameTo" PropertyPath="DateTo"/>
+									<PropertyValue Property="PropertyValueTo" Path="DateTo"/>
+								</Record>
+							</Collection>
+						</PropertyValue>
+						<PropertyValue Property="SelectOptions">
+							<Collection>
+								<Record Type="UI.SelectOptionType">
+									<PropertyValue Property="PropertyName" PropertyPath="DateFrom"/>
+									<PropertyValue Property="Ranges">
+										<Collection>
+											<Record Type="UI.SelectionRangeType">
+												<PropertyValue Property="Sign" EnumMember="UI.SelectionRangeSignType/I"/>
+												<PropertyValue Property="Option" EnumMember="UI.SelectionRangeOptionType/BT"/>
+												<PropertyValue Property="Low" Path="DateFrom"/>
+												<PropertyValue Property="High" Path="DateTo"/>
+											</Record>
+										</Collection>
+									</PropertyValue>
+								</Record>
+								<Record Type="UI.SelectOptionType">
+									<PropertyValue Property="PropertyName" PropertyPath="System"/>
+									<PropertyValue Property="Ranges">
+										<Collection>
+											<Record Type="UI.SelectionRangeType">
+												<PropertyValue Property="Sign" EnumMember="UI.SelectionRangeSignType/I"/>
+												<PropertyValue Property="Option" EnumMember="UI.SelectionRangeOptionType/EQ"/>
+												<PropertyValue Property="Low" Path="System"/>
+											</Record>
+										</Collection>
+									</PropertyValue>
+								</Record>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+				<Annotation Term="UI.DataPoint" Qualifier="TotalCountUarStatus">
+					<Record Type="UI.DataPointType">
+						<PropertyValue Property="Title" String="Emplyees"/>
+						<PropertyValue Property="Value" Path="TotalCount"/>
+						<PropertyValue Property="ValueFormat">
+							<Record Type="UI.NumberFormat">
+								<PropertyValue Property="ScaleFactor" Decimal="1000"/>
+								<PropertyValue Property="NumberOfFractionalDigits" Int="2"/>
+							</Record>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+				<Annotation Term="UI.PresentationVariant" Qualifier="Donut2PV">
+					<Record Type="UI.PresentationVariantType">
+						<PropertyValue Property="SortOrder">
+							<Collection>
+								<Record Type="Common.SortOrderType">
+									<PropertyValue Property="Property" PropertyPath="ReqCount"/>
+									<PropertyValue Property="Descending" Bool="true"/>
+								</Record>
+							</Collection>
+						</PropertyValue>
+						<PropertyValue Property="GroupBy"/>
+						<PropertyValue Property="TotalBy"/>
+						<PropertyValue Property="Total"/>
+						<PropertyValue Property="Visualizations">
+							<Collection>
+								<AnnotationPath>@UI.Chart#Donut2</AnnotationPath>
+							</Collection>
+						</PropertyValue>
+						<PropertyValue Property="RequestAtLeast"/>
+						<PropertyValue Property="MaxItems" Int="3"/>
+						<PropertyValue Property="IncludeGrandTotal" Bool="true"/>
+					</Record>
+				</Annotation>
+				<Annotation Term="UI.Chart" Qualifier="Donut2">
+					<Record Type="UI.ChartDefinitionType">
+						<PropertyValue Property="ChartType" EnumMember="UI.ChartType/Donut"/>
+						<PropertyValue Property="Measures">
+							<Collection>
+								<PropertyPath>ReqCount</PropertyPath>
+							</Collection>
+						</PropertyValue>
+						<PropertyValue Property="MeasureAttributes">
+							<Collection>
+								<Record Type="UI.ChartMeasureAttributeType">
+									<PropertyValue Property="Measure" PropertyPath="ReqCount"/>
+									<PropertyValue Property="Role" EnumMember="UI.ChartMeasureRoleType/Axis1"/>
+								</Record>
+							</Collection>
+						</PropertyValue>
+						<PropertyValue Property="Dimensions">
+							<Collection>
+								<PropertyPath>Action</PropertyPath>
+							</Collection>
+						</PropertyValue>
+						<PropertyValue Property="DimensionAttributes">
+							<Collection>
+								<Record Type="UI.ChartDimensionAttributeType">
+									<PropertyValue Property="Dimension" PropertyPath="Action"/>
+									<PropertyValue Property="Role" EnumMember="UI.ChartDimensionRoleType/Category"/>
+								</Record>
+							</Collection>
+						</PropertyValue>
+						<PropertyValue Property="Actions"/>
+					</Record>
+				</Annotation>
+			</Annotations>
+			<Annotations Target="GRC_ARQ_OVP_SRV.SrvcLvlViol">
+				<Annotation Term="UI.SelectionVariant" Qualifier="Line2SV">
+					<Record Type="UI.SelectionVariantType">
+						<PropertyValue Property="Parameters">
+							<Collection>
+								<Record Type="UI.IntervalParameter">
+									<PropertyValue Property="PropertyNameFrom" PropertyPath="DateFrom"/>
+									<PropertyValue Property="PropertyValueFrom" Path="DateFrom"/>
+									<PropertyValue Property="PropertyNameTo" PropertyPath="DateTo"/>
+									<PropertyValue Property="PropertyValueTo" Path="DateTo"/>
+								</Record>
+								<Record Type="UI.Parameter">
+									<PropertyValue Property="PropertyName" PropertyPath="System"/>
+									<PropertyValue Property="PropertyValue" Path="System"/>
+								</Record>
+							</Collection>
+						</PropertyValue>
+						<PropertyValue Property="SelectOptions">
+							<Collection>
+								<Record Type="UI.SelectOptionType">
+									<PropertyValue Property="PropertyName" PropertyPath="DateFrom"/>
+									<PropertyValue Property="Ranges">
+										<Collection>
+											<Record Type="UI.SelectionRangeType">
+												<PropertyValue Property="Sign" EnumMember="UI.SelectionRangeSignType/I"/>
+												<PropertyValue Property="Option" EnumMember="UI.SelectionRangeOptionType/BT"/>
+												<PropertyValue Property="Low" Path="DateFrom"/>
+												<PropertyValue Property="High" Path="DateTo"/>
+											</Record>
+										</Collection>
+									</PropertyValue>
+								</Record>
+								<Record Type="UI.SelectOptionType">
+									<PropertyValue Property="PropertyName" PropertyPath="System"/>
+									<PropertyValue Property="Ranges">
+										<Collection>
+											<Record Type="UI.SelectionRangeType">
+												<PropertyValue Property="Sign" EnumMember="UI.SelectionRangeSignType/I"/>
+												<PropertyValue Property="Option" EnumMember="UI.SelectionRangeOptionType/EQ"/>
+												<PropertyValue Property="Low" Path="System"/>
+											</Record>
+										</Collection>
+									</PropertyValue>
+								</Record>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+				<Annotation Term="UI.PresentationVariant" Qualifier="Line2PV">
+					<Record Type="UI.PresentationVariantType">
+						<PropertyValue Property="SortOrder">
+							<Collection/>
+						</PropertyValue>
+						<PropertyValue Property="GroupBy"/>
+						<PropertyValue Property="TotalBy"/>
+						<PropertyValue Property="Total"/>
+						<PropertyValue Property="Visualizations">
+							<Collection>
+								<AnnotationPath>@UI.Chart#Line2</AnnotationPath>
+							</Collection>
+						</PropertyValue>
+						<PropertyValue Property="RequestAtLeast"/>
+					</Record>
+				</Annotation>
+				<Annotation Term="UI.Chart" Qualifier="Line2">
+					<Record Type="UI.ChartDefinitionType">
+						<PropertyValue Property="ChartType" EnumMember="UI.ChartType/Line"/>
+						<PropertyValue Property="Measures">
+							<Collection>
+								<PropertyPath>ReqCount</PropertyPath>
+							</Collection>
+						</PropertyValue>
+						<PropertyValue Property="MeasureAttributes">
+							<Collection>
+								<Record Type="UI.ChartMeasureAttributeType">
+									<PropertyValue Property="Measure" PropertyPath="ReqCount"/>
+									<PropertyValue Property="Role" EnumMember="UI.ChartMeasureRoleType/Axis1"/>
+								</Record>
+							</Collection>
+						</PropertyValue>
+						<PropertyValue Property="Dimensions">
+							<Collection>
+								<PropertyPath>MonYear</PropertyPath>
+							</Collection>
+						</PropertyValue>
+						<PropertyValue Property="DimensionAttributes">
+							<Collection>
+								<Record Type="UI.ChartDimensionAttributeType">
+									<PropertyValue Property="Dimension" PropertyPath="MonYear"/>
+									<PropertyValue Property="Role" EnumMember="UI.ChartDimensionRoleType/Category"/>
+								</Record>
+							</Collection>
+						</PropertyValue>
+						<PropertyValue Property="Actions"/>
+					</Record>
+				</Annotation>
+				<Annotation Term="UI.DataPoint" Qualifier="TotalCountService">
+					<Record Type="UI.DataPointType">
+						<PropertyValue Property="Title" String="Violations"/>
+						<PropertyValue Property="Value" Path="TotalCount"/>
+						<PropertyValue Property="ValueFormat">
+							<Record Type="UI.NumberFormat">
+								<PropertyValue Property="ScaleFactor" Decimal="500"/>
+								<PropertyValue Property="NumberOfFractionalDigits" Int="2"/>
+							</Record>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+			</Annotations>
+			<Annotations Target="GRC_ARQ_OVP_SRV.ApproveDelegate">
+				<Annotation Term="UI.PresentationVariant" Qualifier="TablePV">
+					<Record Type="UI.PresentationVariantType">
+						<PropertyValue Property="SortOrder">
+							<Collection>
+								<Record Type="Common.SortOrderType">
+									<PropertyValue Property="Property" PropertyPath="Validity"/>
+									<PropertyValue Property="Descending" Bool="true"/>
+								</Record>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+				<Annotation Term="UI.SelectionVariant" Qualifier="TableSV">
+					<Record Type="UI.SelectionVariantType">
+						<PropertyValue Property="Parameters">
+							<Collection>
+								<Record Type="UI.IntervalParameter">
+									<PropertyValue Property="PropertyNameFrom" PropertyPath="FromDate"/>
+									<PropertyValue Property="PropertyValueFrom" Path="FromDate"/>
+									<PropertyValue Property="PropertyNameTo" PropertyPath="ToDate"/>
+									<PropertyValue Property="PropertyValueTo" Path="ToDate"/>
+								</Record>
+								<Record Type="UI.Parameter">
+									<PropertyValue Property="PropertyName" PropertyPath="System"/>
+									<PropertyValue Property="PropertyValue" Path="System"/>
+								</Record>
+							</Collection>
+						</PropertyValue>
+						<PropertyValue Property="SelectOptions">
+							<Collection>
+								<Record Type="UI.SelectOptionType">
+									<PropertyValue Property="PropertyName" PropertyPath="FromDate"/>
+									<PropertyValue Property="Ranges">
+										<Collection>
+											<Record Type="UI.SelectionRangeType">
+												<PropertyValue Property="Sign" EnumMember="UI.SelectionRangeSignType/I"/>
+												<PropertyValue Property="Option" EnumMember="UI.SelectionRangeOptionType/BT"/>
+												<PropertyValue Property="Low" Path="FromDate"/>
+												<PropertyValue Property="High" Path="ToDate"/>
+											</Record>
+										</Collection>
+									</PropertyValue>
+								</Record>
+								<Record Type="UI.SelectOptionType">
+									<PropertyValue Property="PropertyName" PropertyPath="System"/>
+									<PropertyValue Property="Ranges">
+										<Collection>
+											<Record Type="UI.SelectionRangeType">
+												<PropertyValue Property="Sign" EnumMember="UI.SelectionRangeSignType/I"/>
+												<PropertyValue Property="Option" EnumMember="UI.SelectionRangeOptionType/EQ"/>
+												<PropertyValue Property="Low" Path="System"/>
+											</Record>
+										</Collection>
+									</PropertyValue>
+								</Record>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+				<Annotation Term="UI.LineItem" Qualifier="Employee">
+					<Collection>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="DelegateFor"/>
+							<PropertyValue Property="Label" String="Employee"/>
+						</Record>
+						<Record Type="UI.DataFieldForAnnotation">
+							<PropertyValue Property="Target" AnnotationPath="@UI.DataPoint#WellnessScore"/>
+							<PropertyValue Property="Label" String="Wellness Score"/>
+						</Record>
+						<Record Type="UI.DataFieldForAnnotation">
+							<PropertyValue Property="Target" AnnotationPath="@UI.DataPoint#Date"/>
+							<PropertyValue Property="Label" String="Date"/>
+						</Record>
+					</Collection>
+				</Annotation>
+				<Annotation Term="UI.DataPoint" Qualifier="Date">
+					<Record Type="UI.DataPointType">
+						<PropertyValue Property="Title" String="Date"/>
+						<PropertyValue Property="Value" Path="Validity"/>
+					</Record>
+				</Annotation>
+				<Annotation Term="UI.DataPoint" Qualifier="WellnessScore">
+					<Record Type="UI.DataPointType">
+						<PropertyValue Property="Title" String="Wellness Score"/>
+						<PropertyValue Property="Value" Path="DelegateTo"/>
+					</Record>
+				</Annotation>
+			</Annotations>
+			<Annotations Target="GRC_ARQ_OVP_SRV.UarHistory">
+				<Annotation Term="UI.PresentationVariant" Qualifier="ColStackPV">
+					<Record Type="UI.PresentationVariantType">
+						<PropertyValue Property="SortOrder"/>
+						<PropertyValue Property="GroupBy"/>
+						<PropertyValue Property="TotalBy"/>
+						<PropertyValue Property="Total"/>
+						<PropertyValue Property="Visualizations">
+							<Collection>
+								<AnnotationPath>@UI.Chart#ColStack</AnnotationPath>
+							</Collection>
+						</PropertyValue>
+						<PropertyValue Property="RequestAtLeast"/>
+					</Record>
+				</Annotation>
+				<Annotation Term="UI.Chart" Qualifier="ColStack">
+					<Record Type="UI.ChartDefinitionType">
+						<PropertyValue Property="ChartType" EnumMember="UI.ChartType/ColumnStacked"/>
+						<PropertyValue Property="Measures">
+							<Collection>
+								<PropertyPath>ReqCount</PropertyPath>
+							</Collection>
+						</PropertyValue>
+						<PropertyValue Property="MeasureAttributes">
+							<Collection>
+								<Record Type="UI.ChartMeasureAttributeType">
+									<PropertyValue Property="Measure" PropertyPath="ReqCount"/>
+									<PropertyValue Property="Role" EnumMember="UI.ChartMeasureRoleType/Axis1"/>
+								</Record>
+							</Collection>
+						</PropertyValue>
+						<PropertyValue Property="Dimensions">
+							<Collection>
+								<PropertyPath>Period</PropertyPath>
+								<PropertyPath>Action</PropertyPath>
+							</Collection>
+						</PropertyValue>
+						<PropertyValue Property="DimensionAttributes">
+							<Collection>
+								<Record Type="UI.ChartDimensionAttributeType">
+									<PropertyValue Property="Dimension" PropertyPath="Period"/>
+									<PropertyValue Property="Role" EnumMember="UI.ChartDimensionRoleType/Category"/>
+								</Record>
+								<Record Type="UI.ChartDimensionAttributeType">
+									<PropertyValue Property="Dimension" PropertyPath="Action"/>
+									<PropertyValue Property="Role" EnumMember="UI.ChartDimensionRoleType/Series"/>
+								</Record>
+							</Collection>
+						</PropertyValue>
+						<PropertyValue Property="Actions"/>
+					</Record>
+				</Annotation>
+			</Annotations>
+		</Schema>
+	</edmx:DataServices>
+</edmx:Edmx>

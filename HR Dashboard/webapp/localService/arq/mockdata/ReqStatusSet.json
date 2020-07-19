@@ -1,0 +1,56 @@
+[{
+	"System": "System 1",
+	"DateFrom": "/Date(1456471601000)/",
+	"DateTo": "/Date(1455953201000)/",
+	"Status": "Cheerful",
+	"Count": 520,
+	"Total_Count": 1285,
+	"__metadata": {
+		"uri": "ReqStatusSet('System%201')",
+		"type": "GRC_ARQ_OVP_SRV.RequestByStatus"
+	}
+}, {
+	"System": "System 2",
+	"DateFrom": "/Date(1557214001000)/",
+	"DateTo": "/Date(1238311601000)/",
+	"Status": "Happy",
+	"Count": 320,
+	"Total_Count": 1285,
+	"__metadata": {
+		"uri": "ReqStatusSet('System%202')",
+		"type": "GRC_ARQ_OVP_SRV.RequestByStatus"
+	}
+}, {
+	"System": "System 3",
+	"DateFrom": "/Date(1468135601000)/",
+	"DateTo": "/Date(1144222001000)/",
+	"Status": "Sad",
+	"Count": 245,
+	"Total_Count": 1285,
+	"__metadata": {
+		"uri": "ReqStatusSet('System%203')",
+		"type": "GRC_ARQ_OVP_SRV.RequestByStatus"
+	}
+}, {
+	"System": "System 4",
+	"DateFrom": "/Date(1170487601000)/",
+	"DateTo": "/Date(1546500401000)/",
+	"Status": "Tensed",
+	"Count": 50,
+	"Total_Count": 1285,
+	"__metadata": {
+		"uri": "ReqStatusSet('System%204')",
+		"type": "GRC_ARQ_OVP_SRV.RequestByStatus"
+	}
+}, {
+	"System": "System 5",
+	"DateFrom": "/Date(1245742001000)/",
+	"DateTo": "/Date(1566545201000)/",
+	"Status": "Feeling low",
+	"Count": 150,
+	"Total_Count": 1285,
+	"__metadata": {
+		"uri": "ReqStatusSet('System%205')",
+		"type": "GRC_ARQ_OVP_SRV.RequestByStatus"
+	}
+}]

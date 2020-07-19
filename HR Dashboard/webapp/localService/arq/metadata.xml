@@ -1,0 +1,121 @@
+<edmx:Edmx
+    xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx"
+    xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata"
+    xmlns:sap="http://www.sap.com/Protocols/SAPData" Version="1.0">
+    <edmx:DataServices m:DataServiceVersion="2.0">
+        <Schema
+            xmlns="http://schemas.microsoft.com/ado/2008/09/edm" Namespace="GRC_ARQ_OVP_SRV" xml:lang="en" sap:schema-version="1">
+            <EntityType Name="ApproveDelegate" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="System"/>
+                </Key>
+                <Property Name="System" Type="Edm.String" Nullable="false" MaxLength="32" sap:unicode="false" sap:label="System" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="FromDate" Type="Edm.DateTime" Nullable="false" Precision="0" sap:unicode="false" sap:label="DateFrom" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="ToDate" Type="Edm.DateTime" Nullable="false" Precision="0" sap:unicode="false" sap:label="DateTo" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="DelegateFor" Type="Edm.String" Nullable="false" MaxLength="50" sap:unicode="false" sap:label="Employee" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="DelegateTo" Type="Edm.String" Nullable="false" MaxLength="50" sap:unicode="false" sap:label="Wellness Score" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Validity" Type="Edm.String" Nullable="false" MaxLength="255" sap:unicode="false" sap:label="Date" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityType Name="AssignProc" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="System"/>
+                </Key>
+                <Property Name="System" Type="Edm.String" Nullable="false" MaxLength="32" sap:unicode="false" sap:label="System" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="DateTo" Type="Edm.DateTime" Nullable="false" Precision="0" sap:unicode="false" sap:label="DateTo" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="DateFrom" Type="Edm.DateTime" Nullable="false" Precision="0" sap:unicode="false" sap:label="DateFrom" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="ReqCount" Type="Edm.Int32" sap:unicode="false" sap:label="Screen time Risk" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Action" Type="Edm.String" Nullable="false" MaxLength="132" sap:unicode="false" sap:label="Violations" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="TotalCount" Type="Edm.Int32" sap:unicode="false" sap:label="Total Requests" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityType Name="Filter" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="System"/>
+                </Key>
+                <Property Name="System" Type="Edm.String" Nullable="false" MaxLength="32" sap:unicode="false" sap:label="System" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="DateFrom" Type="Edm.DateTime" Nullable="false" Precision="0" sap:unicode="false" sap:label="Date From" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="DateTo" Type="Edm.DateTime" Nullable="false" Precision="0" sap:unicode="false" sap:label="Date To" sap:creatable="false" sap:updatable="false"/>
+            </EntityType>
+            <EntityType Name="ReqByDueDate" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="System"/>
+                </Key>
+                <Property Name="System" Type="Edm.String" Nullable="false" MaxLength="32" sap:unicode="false" sap:label="System" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="DateFrom" Type="Edm.DateTime" Nullable="false" Precision="0" sap:unicode="false" sap:label="DateFrom" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="DateTo" Type="Edm.DateTime" Nullable="false" Precision="0" sap:unicode="false" sap:label="DateTo" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="MonthYear" Type="Edm.String" MaxLength="132" sap:unicode="false" sap:label="Period" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="ReqCount" Type="Edm.Int32" sap:unicode="false" sap:label="Participation " sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="ProcessID" Type="Edm.String" Nullable="false" MaxLength="30" sap:unicode="false" sap:label="Departments" sap:creatable="false" sap:updatable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityType Name="RequestByStatus" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="System"/>
+                </Key>
+                <Property Name="System" Type="Edm.String" Nullable="false" MaxLength="32" sap:unicode="false" sap:label="System" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="DateFrom" Type="Edm.DateTime" Nullable="false" Precision="0" sap:unicode="false" sap:label="DateFrom" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="DateTo" Type="Edm.DateTime" Nullable="false" Precision="0" sap:unicode="false" sap:label="DateTo" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="Status" Type="Edm.String" Nullable="false" MaxLength="132" sap:unicode="false" sap:label="Mood" sap:creatable="false" sap:updatable="false" sap:filterable="false"/>
+                <Property Name="Count" Type="Edm.Int32" sap:unicode="false" sap:label="Employees" sap:creatable="false" sap:updatable="false" sap:filterable="false"/>
+                <Property Name="Total_Count" Type="Edm.Int32" sap:unicode="false" sap:label="Total Requests" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityType Name="SrvcLvlViol" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="System"/>
+                </Key>
+                <Property Name="System" Type="Edm.String" Nullable="false" MaxLength="32" sap:unicode="false" sap:label="System" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="DateFrom" Type="Edm.DateTime" Nullable="false" Precision="0" sap:unicode="false" sap:label="DateFrom" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="DateTo" Type="Edm.DateTime" Nullable="false" Precision="0" sap:unicode="false" sap:label="DateTo" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="ReqCount" Type="Edm.Int32" sap:unicode="false" sap:label="Percentage" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="MonYear" Type="Edm.String" Nullable="false" MaxLength="132" sap:unicode="false" sap:label="Quarter" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="TotalCount" Type="Edm.Int32" sap:unicode="false" sap:label="Engagement" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityType Name="UarHistory" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="System"/>
+                </Key>
+                <Property Name="System" Type="Edm.String" Nullable="false" MaxLength="32" sap:unicode="false" sap:label="System" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="DateFrom" Type="Edm.DateTime" Nullable="false" Precision="0" sap:unicode="false" sap:label="DateFrom" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="DateTo" Type="Edm.DateTime" Nullable="false" Precision="0" sap:unicode="false" sap:label="DateTo" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="ReqCount" Type="Edm.Int32" sap:unicode="false" sap:label="Health Risk" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Action" Type="Edm.String" Nullable="false" MaxLength="132" sap:unicode="false" sap:label="Category" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Period" Type="Edm.String" Nullable="false" MaxLength="132" sap:unicode="false" sap:label="Quarter" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityType Name="UarStatus" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="System"/>
+                </Key>
+                <Property Name="System" Type="Edm.String" Nullable="false" MaxLength="32" sap:unicode="false" sap:label="System" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="DateTo" Type="Edm.DateTime" Nullable="false" Precision="0" sap:unicode="false" sap:label="DateFrom" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="DateFrom" Type="Edm.DateTime" Nullable="false" Precision="0" sap:unicode="false" sap:label="DateTo" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="ReqCount" Type="Edm.Int32" sap:unicode="false" sap:label="Challenges" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Action" Type="Edm.String" Nullable="false" MaxLength="132" sap:unicode="false" sap:label="Participation" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="TotalCount" Type="Edm.Int32" sap:unicode="false" sap:label="TotalEmployees" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityType Name="UserProc" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="System"/>
+                </Key>
+                <Property Name="System" Type="Edm.String" Nullable="false" MaxLength="32" sap:unicode="false" sap:label="System" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="DateTo" Type="Edm.DateTime" Nullable="false" Precision="0" sap:unicode="false" sap:label="DateTo" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="DateFrom" Type="Edm.DateTime" Nullable="false" Precision="0" sap:unicode="false" sap:label="DateFrom" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="ReqCount" Type="Edm.Int32" sap:unicode="false" sap:label="Steps taken" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Action" Type="Edm.String" Nullable="false" MaxLength="132" sap:unicode="false" sap:label="Department" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="TotalCount" Type="Edm.Int32" sap:unicode="false" sap:label="Total Steps" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityContainer Name="GRC_ARQ_OVP_SRV_Entities" m:IsDefaultEntityContainer="true" sap:supported-formats="atom json xlsx">
+                <EntitySet Name="ApproveDelegateSet" EntityType="GRC_ARQ_OVP_SRV.ApproveDelegate" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
+                <EntitySet Name="AssignProcSet" EntityType="GRC_ARQ_OVP_SRV.AssignProc" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
+                <EntitySet Name="FilterSet" EntityType="GRC_ARQ_OVP_SRV.Filter" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
+                <EntitySet Name="ReqDueDateSet" EntityType="GRC_ARQ_OVP_SRV.ReqByDueDate" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
+                <EntitySet Name="ReqStatusSet" EntityType="GRC_ARQ_OVP_SRV.RequestByStatus" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
+                <EntitySet Name="SrvcLvlViolSet" EntityType="GRC_ARQ_OVP_SRV.SrvcLvlViol" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
+                <EntitySet Name="UarHistorySet" EntityType="GRC_ARQ_OVP_SRV.UarHistory" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
+                <EntitySet Name="UarStatusSet" EntityType="GRC_ARQ_OVP_SRV.UarStatus" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
+                <EntitySet Name="UserProcSet" EntityType="GRC_ARQ_OVP_SRV.UserProc" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
+            </EntityContainer>
+            <atom:link
+                xmlns:atom="http://www.w3.org/2005/Atom" rel="self" href="./sap/GRC_ARQ_OVP_SRV/$metadata"/>
+                <atom:link
+                    xmlns:atom="http://www.w3.org/2005/Atom" rel="latest-version" href="./sap/GRC_ARQ_OVP_SRV/$metadata"/>
+                </Schema>
+            </edmx:DataServices>
+        </edmx:Edmx>

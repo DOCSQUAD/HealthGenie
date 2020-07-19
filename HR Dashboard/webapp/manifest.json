@@ -1,0 +1,198 @@
+{
+	"_version": "1.7.0",
+	"start_url": "start.html",
+	"sap.app": {
+		"id": "${project.artifactId}",
+		"type": "application",
+		"i18n": "i18n/i18n.properties",
+		"applicationVersion": {
+			"version": "${project.version}"
+		},
+		"title": "{{app_title}}",
+		"ach": "GRC-SAC-ARQ",
+		"resources": "resources.json",
+		"dataSources": {
+			"arq": {
+				"uri": "/sap/opu/odata/sap/GRC_ARQ_OVP_SRV/",
+				"type": "OData",
+				"settings": {
+					"localUri": "localService/arq/metadata.xml",
+					"annotations": [
+						"annotation0"
+					]
+				}
+			},
+			"annotation0": {
+				"type": "ODataAnnotation",
+				"uri": "annotations/annotation0.xml",
+				"settings": {
+					"localUri": "annotations/annotation0.xml"
+				}
+			}
+		},
+		"sourceTemplate": {
+			"id": "OVP.smartovptemplate",
+			"version": "1.41.1"
+		}
+	},
+	"sap.ui": {
+		"technology": "UI5",
+		"icons": {
+			"icon": ""
+		},
+		"deviceTypes": {
+			"desktop": true,
+			"tablet": true,
+			"phone": true
+		},
+		"supportedThemes": [
+			"sap_belize"
+		]
+	},
+	"sap.ui5": {
+		"dependencies": {
+			"minUI5Version": "${sap.ui5.dist.version}",
+			"libs": {
+				"sap.ovp": {}
+			}
+		},
+		"models": {
+			"i18n": {
+				"type": "sap.ui.model.resource.ResourceModel",
+				"uri": "i18n/i18n.properties"
+			},
+			"@i18n": {
+				"preload": true,
+				"type": "sap.ui.model.resource.ResourceModel",
+				"uri": "i18n/i18n.properties"
+			},
+			"arq": {
+				"dataSource": "arq",
+				"settings": {
+					"defaultCountMode": "Inline"
+				}
+			}
+		},
+		"extends": {
+			"extensions": {}
+		},
+		"contentDensities": {
+			"compact": true,
+			"cozy": true
+		}
+	},
+	"sap.fiori": {
+		"registrationIds": [],
+		"archeType": "analytical"
+	},
+	"sap.ovp": {
+		"globalFilterModel": "arq",
+		"globalFilterEntityType": "",
+		"containerLayout": "resizable",
+		"enableLiveFilter": true,
+		"considerAnalyticalParameters": true,
+		"cards": {
+			"card00": {
+				"model": "arq",
+				"template": "sap.ovp.cards.charts.analytical",
+				"settings": {
+					"title": "{{card00_title}}",
+					"entitySet": "ReqStatusSet",
+					"chartAnnotationPath": "com.sap.vocabularies.UI.v1.Chart#Donut1",
+					"presentationAnnotationPath": "com.sap.vocabularies.UI.v1.PresentationVariant#Donut1PV",
+					"dataPointAnnotationPath": "com.sap.vocabularies.UI.v1.DataPoint#TotalCountStatus",
+					"navigation": "chartNav",
+					"valueSelectionInfo": "{{card00_valueSelectionInfo}}"
+				}
+			},
+			"card01": {
+				"model": "arq",
+				"template": "sap.ovp.cards.charts.analytical",
+				"settings": {
+					"title": "{{card01_title}}",
+					"entitySet": "AssignProcSet",
+					"chartAnnotationPath": "com.sap.vocabularies.UI.v1.Chart#Bar1",
+					"presentationAnnotationPath": "com.sap.vocabularies.UI.v1.PresentationVariant#Bar1PV",
+					"dataPointAnnotationPath": "com.sap.vocabularies.UI.v1.DataPoint#TotalCountAssign",
+					"navigation": "chartNav",
+					"valueSelectionInfo": "{{card01_valueSelectionInfo}}"
+				}
+			},
+			"card02": {
+				"model": "arq",
+				"template": "sap.ovp.cards.charts.analytical",
+				"settings": {
+					"title": "{{card02_title}}",
+					"entitySet": "ReqDueDateSet",
+					"chartAnnotationPath": "com.sap.vocabularies.UI.v1.Chart#Line1",
+					"presentationAnnotationPath": "com.sap.vocabularies.UI.v1.PresentationVariant#Line1PV",
+					"navigation": "dataPointNav"
+				}
+			},
+			"card03": {
+				"model": "arq",
+				"template": "sap.ovp.cards.charts.analytical",
+				"settings": {
+					"title": "{{card03_title}}",
+					"entitySet": "UserProcSet",
+					"chartAnnotationPath": "com.sap.vocabularies.UI.v1.Chart#Bar2",
+					"presentationAnnotationPath": "com.sap.vocabularies.UI.v1.PresentationVariant#Bar2PV",
+					"dataPointAnnotationPath": "com.sap.vocabularies.UI.v1.DataPoint#TotalCountUsers",
+					"navigation": "chartNav",
+					"valueSelectionInfo": "{{card03_valueSelectionInfo}}"
+				}
+			},
+			"card04": {
+				"model": "arq",
+				"template": "sap.ovp.cards.charts.analytical",
+				"settings": {
+					"title": "{{card04_title}}",
+					"entitySet": "UarStatusSet",
+					"chartAnnotationPath": "com.sap.vocabularies.UI.v1.Chart#Donut2",
+					"presentationAnnotationPath": "com.sap.vocabularies.UI.v1.PresentationVariant#Donut2PV",
+					"dataPointAnnotationPath": "com.sap.vocabularies.UI.v1.DataPoint#TotalCountUarStatus",
+					"navigation": "chartNav",
+					"valueSelectionInfo": "{{card04_valueSelectionInfo}}"
+				}
+			},
+			"card05": {
+				"model": "arq",
+				"template": "sap.ovp.cards.charts.analytical",
+				"settings": {
+					"title": "{{card05_title}}",
+					"entitySet": "SrvcLvlViolSet",
+					"chartAnnotationPath": "com.sap.vocabularies.UI.v1.Chart#Line2",
+					"presentationAnnotationPath": "com.sap.vocabularies.UI.v1.PresentationVariant#Line2PV",
+					"dataPointAnnotationPath": "com.sap.vocabularies.UI.v1.DataPoint#TotalCountService",
+					"navigation": "dataPointNav"
+				}
+			},
+			"card06": {
+				"model": "arq",
+				"template": "sap.ovp.cards.table",
+				"settings": {
+					"title": "{{card06_title}}",
+					"entitySet": "ApproveDelegateSet",
+					"showFilterInHeader": true,
+					"sortBy": "Validity",
+					"sortOrder": "descending",
+					"addODataSelect": false,
+					"annotationPath": "com.sap.vocabularies.UI.v1.LineItem#Employee",
+					"presentationAnnotationPath": "com.sap.vocabularies.UI.v1.PresentationVariant#TablePV"
+				}
+			},
+			"card07": {
+				"model": "arq",
+				"template": "sap.ovp.cards.charts.analytical",
+				"settings": {
+					"title": "{{card07_title}}",
+					"subTitle": "{{card07_subTitle}}",
+					"entitySet": "UarHistorySet",
+					"chartAnnotationPath": "com.sap.vocabularies.UI.v1.Chart#ColStack",
+					"presentationAnnotationPath": "com.sap.vocabularies.UI.v1.PresentationVariant#ColStackPV",
+					"navigation": "dataPointNav"
+				}
+			}
+		}
+	}
+}

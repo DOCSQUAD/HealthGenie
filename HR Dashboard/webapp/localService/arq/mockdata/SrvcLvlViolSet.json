@@ -1,0 +1,45 @@
+[{
+	"System": "System 1",
+	"DateFrom": "/Date(1362295995000)/",
+	"DateTo": "/Date(1118129595000)/",
+	"ReqCount": 40,
+	"MonYear": "Q1 2020",
+	"TotalCount": 5345,
+	"__metadata": {
+		"uri": "SrvcLvlViolSet('System%201')",
+		"type": "GRC_ARQ_OVP_SRV.SrvcLvlViol"
+	}
+}, {
+	"System": "System 2",
+	"DateFrom": "/Date(983691195000)/",
+	"DateTo": "/Date(989479995000)/",
+	"ReqCount": 60,
+	"MonYear": "Q2 2020",
+	"TotalCount": 5345,
+	"__metadata": {
+		"uri": "SrvcLvlViolSet('System%202')",
+		"type": "GRC_ARQ_OVP_SRV.SrvcLvlViol"
+	}
+}, {
+	"System": "System 3",
+	"DateFrom": "/Date(1519889595000)/",
+	"DateTo": "/Date(1166599995000)/",
+	"ReqCount": 75,
+	"MonYear": "Q3 2020",
+	"TotalCount": 5345,
+	"__metadata": {
+		"uri": "SrvcLvlViolSet('System%203')",
+		"type": "GRC_ARQ_OVP_SRV.SrvcLvlViol"
+	}
+}, {
+	"System": "System 4",
+	"DateFrom": "/Date(1365838395000)/",
+	"DateTo": "/Date(1431329595000)/",
+	"ReqCount": 80,
+	"MonYear": "Q4 2020",
+	"TotalCount": 5345,
+	"__metadata": {
+		"uri": "SrvcLvlViolSet('System%204')",
+		"type": "GRC_ARQ_OVP_SRV.SrvcLvlViol"
+	}
+}]

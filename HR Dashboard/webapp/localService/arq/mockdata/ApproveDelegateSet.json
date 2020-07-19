@@ -1,0 +1,67 @@
+[{
+	"System": "System 1",
+	"FromDate": "/Date(1556005078000)/",
+	"ToDate": "/Date(1563867478000)/",
+	"DelegateFor": "Anagha Gadagkar",
+	"DelegateTo": "Fair",
+	"Validity": "Jul 20",
+	"__metadata": {
+		"uri": "ApproveDelegateSet('System%201')",
+		"type": "GRC_ARQ_OVP_SRV.ApproveDelegate"
+	}
+}, {
+	"System": "System 2",
+	"FromDate": "/Date(954315478000)/",
+	"ToDate": "/Date(1438501078000)/",
+	"DelegateFor": "Shwetank Mishra",
+	"DelegateTo": " Good",
+	"Validity": "Jul 15",
+	"__metadata": {
+		"uri": "ApproveDelegateSet('System%202')",
+		"type": "GRC_ARQ_OVP_SRV.ApproveDelegate"
+	}
+}, {
+	"System": "System 3",
+	"FromDate": "/Date(1285054678000)/",
+	"ToDate": "/Date(1154331478000)/",
+	"DelegateFor": "Jatin Nijhawan",
+	"DelegateTo": "Fair",
+	"Validity": "Jun 28",
+	"__metadata": {
+		"uri": "ApproveDelegateSet('System%203')",
+		"type": "GRC_ARQ_OVP_SRV.ApproveDelegate"
+	}
+}, {
+	"System": "System 4",
+	"FromDate": "/Date(1556005078000)/",
+	"ToDate": "/Date(1563867478000)/",
+	"DelegateFor": "Akhila Gadagkar",
+	"DelegateTo": "Good",
+	"Validity": "Jul 12",
+	"__metadata": {
+		"uri": "ApproveDelegateSet('System%201')",
+		"type": "GRC_ARQ_OVP_SRV.ApproveDelegate"
+	}
+}, {
+	"System": "System 5",
+	"FromDate": "/Date(954315478000)/",
+	"ToDate": "/Date(1438501078000)/",
+	"DelegateFor": "Rohit Malhottra",
+	"DelegateTo": "Fair",
+	"Validity": "Jul 01",
+	"__metadata": {
+		"uri": "ApproveDelegateSet('System%202')",
+		"type": "GRC_ARQ_OVP_SRV.ApproveDelegate"
+	}
+}, {
+	"System": "System 6",
+	"FromDate": "/Date(1285054678000)/",
+	"ToDate": "/Date(1154331478000)/",
+	"DelegateFor": "Dipanjan Nag",
+	"DelegateTo": "Risk",
+	"Validity": "Jun 15",
+	"__metadata": {
+		"uri": "ApproveDelegateSet('System%203')",
+		"type": "GRC_ARQ_OVP_SRV.ApproveDelegate"
+	}
+}]

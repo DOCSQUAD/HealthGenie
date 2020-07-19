@@ -1,0 +1,34 @@
+[{
+	"System": "System 1",
+	"DateTo": "/Date(1455176199000)/",
+	"DateFrom": "/Date(1194075399000)/",
+	"ReqCount": 212,
+	"Action": "Risky",
+	"TotalCount": 1042,
+	"__metadata": {
+		"uri": "AssignProcSet('System%201')",
+		"type": "GRC_ARQ_OVP_SRV.AssignProc"
+	}
+}, {
+	"System": "System 2",
+	"DateTo": "/Date(1457508999000)/",
+	"DateFrom": "/Date(1332315399000)/",
+	"ReqCount": 180,
+	"Action": "Possible Risk",
+	"TotalCount": 1042,
+	"__metadata": {
+		"uri": "AssignProcSet('System%202')",
+		"type": "GRC_ARQ_OVP_SRV.AssignProc"
+	}
+}, {
+	"System": "System 3",
+	"DateTo": "/Date(1354952199000)/",
+	"DateFrom": "/Date(1383464199000)/",
+	"ReqCount": 650,
+	"Action": "Acceptable",
+	"TotalCount": 1042,
+	"__metadata": {
+		"uri": "AssignProcSet('System%203')",
+		"type": "GRC_ARQ_OVP_SRV.AssignProc"
+	}
+}]
