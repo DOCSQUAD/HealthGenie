@@ -1,0 +1,69 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns:uxap="sap.uxap" controllerName="successhealth.SuccessHealth01.controller.Challenges"
+	displayBlock="true" xmlns="sap.m" xmlns:core="sap.ui.core">
+	<Page backgroundDesign="Solid" class="sapUiResponsiveContentPadding" showNavButton="true" title="Challenges" id="page0" showFooter="true"
+		navButtonPress="onNavBack">
+		<content>
+			<VBox>
+				<!--<Toolbar>-->
+					<Title level="H1" text="My Challenges" class="myCustomText sapUiSmallMarginBottom"/>
+				<!--</Toolbar>-->
+				<!--<Title level="H2" text="Compete with your friends" class="sapUiSmallMarginBottom"/>-->
+				<HBox>
+					<GenericTile frameType="Auto" header="Start a Challenge" id="tile0" backgroundImage="" headerImage="/webapp/images/add.png"
+						class="sapUiMediumMarginBottom">
+						<TileContent>
+							<FeedContent contentText="Invite your friends to compete"/>
+						</TileContent>
+					</GenericTile>
+					<GenericTile header="Zumba" id="tiles" backgroundImage="" headerImage="/webapp/images/dance.png" class="sapUiMediumMarginBegin"
+						visible="false">
+						<TileContent>
+							<FeedContent contentText="Min half an hour zumba daily for 31 days"/>
+						</TileContent>
+					</GenericTile>
+				</HBox>
+			</VBox>
+			<VBox>
+				<!--<Toolbar>-->
+					<Title level="H1" text="Global Challenges" class="sapUiMediumMarginTop myCustomText sapUiSmallMarginBottom"/>
+				<!--</Toolbar>-->
+				<Title level="H2" text="Dance Fitness" class="sapUiSmallMarginBottom myCustomText"/>
+				<HBox>
+					<GenericTile header="Zumba" id="tile5" backgroundImage="" headerImage="/webapp/images/dance.png" class="sapUiMediumMarginBottom"
+						press="onpressDanceFitness">
+						<TileContent>
+							<FeedContent contentText="Min half an hour zumba daily for 31 days"/>
+						</TileContent>
+					</GenericTile>
+				</HBox>
+				<Title level="H2" text="Running" class="sapUiSmallMarginBottom myCustomText"/>
+				<HBox>
+					<GenericTile header="Fly in July" id="tile1" backgroundImage="" headerImage="/webapp/images/running1.jpg" class="sapUiMediumMarginEnd">
+						<TileContent>
+							<FeedContent contentText="Cover a min 5km run with fastest average"/>
+						</TileContent>
+					</GenericTile>
+					<GenericTile header="July Dairies" subheader="" id="tile2" backgroundImage="" headerImage="/webapp/images/running2.png"
+						class="sapUiMediumMarginBottom">
+						<TileContent>
+							<FeedContent contentText="Run the most km in 31 days"/>
+						</TileContent>
+					</GenericTile>
+				</HBox>
+				<Title level="H2" text="Cycling" class="sapUiSmallMarginBottom myCustomText"/>
+				<HBox>
+					<GenericTile header="Speedster" id="tile3" backgroundImage="" headerImage="/webapp/images/cycling1.jpg" class="sapUiMediumMarginEnd">
+						<TileContent>
+							<FeedContent contentText="Cover a min 20km ride with fastest average"/>
+						</TileContent>
+					</GenericTile>
+					<GenericTile header="Mighty July" id="tile4" backgroundImage="" headerImage="/webapp/images/cycling2.jpg" class="sapUiMediumMarginBottom">
+						<TileContent>
+							<FeedContent contentText="Ride the most km in 31 days"/>
+						</TileContent>
+					</GenericTile>
+				</HBox>
+			</VBox>
+		</content>
+	</Page>
+</mvc:View>

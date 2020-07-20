@@ -1,0 +1,271 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" controllerName="successhealth.SuccessHealth01.controller.GainNutrition" displayBlock="true">
+	<App xmlns="sap.m" id="app0">
+		<pages>
+			<Page title="Gain Nutrition" id="page0" backgroundDesign="Solid" showNavButton="true" navButtonPress="onNavBack">
+				<!--<sap.m.semantic:MasterPage title="Gain Nutrition" xmlns:sap.m.semantic="sap.m.semantic" id="page0"> -->
+				<content>
+				<!--<sap.m.semantic:addAction>-->
+				<!--	<sap.m.semantic:AddAction tooltip="Add" id="action0" press="onAdd"/>-->
+				<!--</sap.m.semantic:addAction>-->
+				<!--<sap.m.semantic:deleteAction>-->
+				<!--	<sap.m.semantic:DeleteAction id="action1">-->
+				<!--</sap.m.semantic:deleteAction>-->
+				<!--<sap.m.semantic:saveAction><sap.m.semantic:SaveAction id="action0_1534412278579"/>-->
+				<!--</sap.m.semantic:saveAction>-->
+					<Label id="label0" text="Please select food details you have opted for today !" width="100%"/>
+					<!--<Label id="label0_copy2" text="Nutrient" width="100%"/>-->
+					<IconTabBar id="bar2" selectedKey="__filter3">
+						<items>
+							<IconTabFilter id="filter3" text="BREAKFAST" icon="/webapp/images/bf.jpg">
+								<content>
+									<HBox>
+										<CheckBox id="box14" text="Idli   (150 Cal)" name="Idli" class="sapUiLargeMarginEnd"/>
+										<ComboBox xmlns:sap.ui.core="sap.ui.core" value="List Item 5" selectedKey="item1" selectedItemId="__item25" id="box8_1536131403275" placeholder="Serving">
+											<items>
+												<sap.ui.core:ListItem text="1" key="item1" id="item25"/>
+												<sap.ui.core:ListItem text="2" key="item2" id="item26"/>
+												<sap.ui.core:ListItem text="3" key="item3" id="item27"/>
+											</items>
+										</ComboBox>
+									</HBox>
+									<HBox>
+										<CheckBox id="box15" text="Masala Dosa  (250 Cal)" name="MASALA DOSA" class="sapUiLargeMarginEnd"/>
+										<ComboBox xmlns:sap.ui.core="sap.ui.core" value="List Item 1" selectedKey="item1" selectedItemId="__item22" id="box7_1536131398655" placeholder="Serving">
+											<items>
+												<sap.ui.core:ListItem text="1" key="item1" id="item22"/>
+												<sap.ui.core:ListItem text="2" key="item2" id="item23"/>
+												<sap.ui.core:ListItem text="3" key="item3" id="item24"/>
+											</items>
+										</ComboBox>
+										<!--</items>-->
+									</HBox>
+									<HBox>
+										<CheckBox id="box16" text="Fruit Salad   (100 Cal)" name="WADA SAMBHAR" class="sapUiLargeMarginEnd"/>
+										<ComboBox xmlns:sap.ui.core="sap.ui.core" value="List Item 1" selectedKey="item1" selectedItemId="__item28" id="box9_1536131405890" placeholder="Serving">
+											<items>
+												<sap.ui.core:ListItem text="1" key="item1" id="item28"/>
+												<sap.ui.core:ListItem text="2" key="item2" id="item29"/>
+												<sap.ui.core:ListItem text="3" key="item3" id="item30"/></items>
+										</ComboBox>
+										<!--</items>-->
+									</HBox>
+									<HBox>
+										<CheckBox id="box17" text="Oats   (50 Cal)" name="Oats" class="sapUiLargeMarginEnd"/>
+										<ComboBox xmlns:sap.ui.core="sap.ui.core" value="List Item 1" selectedKey="item1" selectedItemId="__item31" id="box10_1536131408699" placeholder="Serving">
+											<items>
+												<sap.ui.core:ListItem text="1" key="item1" id="item31"/>
+												<sap.ui.core:ListItem text="2" key="item2" id="item32"/>
+												<sap.ui.core:ListItem text="3" key="item3" id="item33"/></items>
+										</ComboBox>
+										<!--</items>-->
+									</HBox>
+									<HBox>
+										<CheckBox id="box188" text="Sandwich   (150 Cal)" name="SANDWICH" class="sapUiLargeMarginEnd"/>
+										<ComboBox xmlns:sap.ui.core="sap.ui.core" value="List Item 1" selectedKey="item1" selectedItemId="__item34" id="box11_1536131414194" placeholder="Serving">
+											<items>
+												<sap.ui.core:ListItem text="1" key="item1" id="item34"/>
+												<sap.ui.core:ListItem text="2" key="item2" id="item35"/>
+												<sap.ui.core:ListItem text="3" key="item3" id="item36"/></items>
+										</ComboBox>
+										<!--</items>-->
+									</HBox>
+									<HBox>
+										<CheckBox id="box19" text="Mill Cornflakes   (90 Cal)" name="MILK AND CORNFLAKES" class="sapUiLargeMarginEnd"/>
+										<ComboBox xmlns:sap.ui.core="sap.ui.core" value="List Item 1" selectedKey="item1" selectedItemId="__item40" id="box13_1536131420774" placeholder="Serving">
+											<items>
+												<sap.ui.core:ListItem text="1" key="item1" id="item40"/>
+												<sap.ui.core:ListItem text="2" key="item2" id="item41"/>
+												<sap.ui.core:ListItem text="3" key="item3" id="item42"/></items>
+										</ComboBox>
+										<!--</items>-->
+									</HBox>
+									<HBox>
+										<CheckBox id="box20" text="Paratha   (150 Cal)" name="Paratha" class="sapUiLargeMarginEnd"/>
+										<ComboBox xmlns:sap.ui.core="sap.ui.core" value="List Item 1" selectedKey="item1" selectedItemId="__item37" id="box12_1536131416865" placeholder="Serving">
+											<items>
+												<sap.ui.core:ListItem text="1" key="item1" id="item37"/>
+												<sap.ui.core:ListItem text="2" key="item2" id="item38"/>
+												<sap.ui.core:ListItem text="3" key="item3" id="item39"/></items>
+										</ComboBox>
+										<!--</items>-->
+									</HBox>
+									<CheckBox xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" id="box188_copy" text="FRUIT BOWL" name="FRUIT BOWL" class="sapUiLargeMarginEnd"/>
+									<ComboBox xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:sap.ui.core="sap.ui.core" value="List Item 1" selectedKey="item1" selectedItemId="__item37" id="box12_1536131416865_copy" placeholder="Serving">
+										<items>
+											<sap.ui.core:ListItem text="1" key="item1" id="item37_copy"/>
+											<sap.ui.core:ListItem text="2" key="item2" id="item38_copy"/>
+											<sap.ui.core:ListItem text="3" key="item3" id="item39_copy"/>
+										</items>
+									</ComboBox>
+								</content>
+							</IconTabFilter>
+							<IconTabFilter id="filter4" text="LUNCH" icon="/webapp/images/lunch.jpg" iconColor="Critical">
+								<content>
+									<HBox>
+										<CheckBox id="box3" text="Chinese Combo     (560 Cal)" name="Chinese Combo" class="sapUiLargeMarginEnd"/>
+										<!--<items>-->
+										<ComboBox xmlns:sap.ui.core="sap.ui.core" value="List Item 1" selectedKey="item1" selectedItemId="__item1" id="box0" placeholder="Serving">
+											<items>
+												<sap.ui.core:ListItem text="1" key="item1" id="item1"/>
+												<sap.ui.core:ListItem text="2" key="item2" id="item2"/>
+												<sap.ui.core:ListItem text="3" key="item3" id="item3"/></items>
+										</ComboBox>
+										<!--</items>-->
+									</HBox>
+									<HBox>
+										<CheckBox id="box0_1535803188257" text="Salad    (150 Cal)" name="Salad" class="sapUiLargeMarginEnd"/>
+										<ComboBox xmlns:sap.ui.core="sap.ui.core" value="List Item 1" selectedKey="item1" selectedItemId="__item4" id="box1_1536131366196" placeholder="Serving">
+											<items>
+												<sap.ui.core:ListItem text="1" key="item1" id="item4"/>
+												<sap.ui.core:ListItem text="2" key="item2" id="item5"/>
+												<sap.ui.core:ListItem text="3" key="item3" id="item6"/></items>
+										</ComboBox>
+										<!--<items/>-->
+									</HBox>
+									<HBox>
+										<CheckBox id="box2" text="Burger/Sandwich   (250 Cal)" name="Global Grill" class="sapUiLargeMarginEnd"/>
+										<ComboBox xmlns:sap.ui.core="sap.ui.core" value="List Item 1" selectedKey="item1" selectedItemId="__item7" id="box2_1536131377133" placeholder="Serving">
+											<items>
+												<sap.ui.core:ListItem text="1" key="item1" id="item7"/>
+												<sap.ui.core:ListItem text="2" key="item2" id="item8"/>
+												<sap.ui.core:ListItem text="3" key="item3" id="item9"/></items>
+										</ComboBox>
+										<!--</items>-->
+									</HBox>
+									<HBox>
+										<CheckBox id="box5" text="South Indian Combo   (550 Cal)" name="South Indian Combo" class="sapUiLargeMarginEnd"/>
+										<ComboBox xmlns:sap.ui.core="sap.ui.core" value="List Item 1" selectedKey="item1" selectedItemId="__item10" id="box3_1536131380801" placeholder="Serving">
+											<items>
+												<sap.ui.core:ListItem text="1" key="item1" id="item10"/>
+												<sap.ui.core:ListItem text="2" key="item2" id="item11"/>
+												<sap.ui.core:ListItem text="3" key="item3" id="item12"/></items>
+										</ComboBox>
+										<!--</items>-->
+									</HBox>
+									<HBox>
+										<CheckBox id="box4" text="Biryani   (700 Cal)" name="Biryani" class="sapUiLargeMarginEnd"/>
+										<ComboBox xmlns:sap.ui.core="sap.ui.core" value="List Item 1" selectedKey="item1" selectedItemId="__item13" id="box4_1536131383915" placeholder="Serving">
+											<items>
+												<sap.ui.core:ListItem text="1" key="item1" id="item13"/>
+												<sap.ui.core:ListItem text="2" key="item2" id="item14"/>
+												<sap.ui.core:ListItem text="3" key="item3" id="item15"/></items>
+										</ComboBox>
+										<!--</items>-->
+									</HBox>
+									<HBox>
+										<CheckBox id="box6" text="Tandoori Combo   (450 Cal)" name="Tandoori Combo" class="sapUiLargeMarginEnd"/>
+										<ComboBox xmlns:sap.ui.core="sap.ui.core" value="List Item 1" selectedKey="item1" selectedItemId="__item16" id="box5_1536131387254" placeholder="Serving">
+											<items>
+												<sap.ui.core:ListItem text="1" key="item1" id="item16"/>
+												<sap.ui.core:ListItem text="2" key="item2" id="item17"/>
+												<sap.ui.core:ListItem text="3" key="item3" id="item18"/></items>
+										</ComboBox>
+										<!--</items>-->
+									</HBox>
+									<HBox>
+										<CheckBox id="box1" text="North Indian Combo   (650 Cal)" name="North Indian Combo" class="sapUiLargeMarginEnd"/>
+										<ComboBox xmlns:sap.ui.core="sap.ui.core" value="List Item 1" selectedKey="item1" selectedItemId="__item19" id="box6_1536131390815" placeholder="Serving">
+											<items>
+												<sap.ui.core:ListItem text="1" key="item1" id="item19"/>
+												<sap.ui.core:ListItem text="2" key="item2" id="item20"/>
+												<sap.ui.core:ListItem text="3" key="item3" id="item21"/></items>
+										</ComboBox>
+										<!--</items>-->
+									</HBox>
+								</content>
+							</IconTabFilter>
+							<IconTabFilter id="filter5" text="DINNER" icon="/webapp/images/dinner.jpg" iconColor="Positive">
+								<content>
+									<HBox>
+										<CheckBox id="box7" text="Roti Combo   (250 Cal)" name="Roti Combo" class="sapUiLargeMarginEnd"/>
+										<ComboBox xmlns:sap.ui.core="sap.ui.core" value="List Item 1" selectedKey="item1" selectedItemId="__item43" id="box14_1536131479373" placeholder="Serving">
+											<items>
+												<sap.ui.core:ListItem text="1" key="item1" id="item43"/>
+												<sap.ui.core:ListItem text="2" key="item2" id="item44"/>
+												<sap.ui.core:ListItem text="3" key="item3" id="item45"/></items>
+										</ComboBox>
+										<!--</items>-->
+									</HBox>
+									<HBox>
+										<CheckBox id="box8" name="Rice Como" text="Rice Combo     (500 Cal)" class="sapUiLargeMarginEnd"/>
+										<ComboBox xmlns:sap.ui.core="sap.ui.core" value="List Item 1" selectedKey="item1" selectedItemId="__item0" id="box0_1536131495035" placeholder="Serving">
+											<items>
+												<sap.ui.core:ListItem text="1" key="item1" id="item0"/>
+												<sap.ui.core:ListItem text="2" key="item2" id="item1_1536131495034"/>
+												<sap.ui.core:ListItem text="3" key="item3" id="item2_1536131495034"/></items>
+										</ComboBox>
+										<!--</items>-->
+									</HBox>
+									<HBox>
+										<CheckBox id="box9" text="Veg/NonVeg Thali   (800 Cal)" name="Veg/NonVeg Thali" class="sapUiLargeMarginEnd"/>		
+										<ComboBox xmlns:sap.ui.core="sap.ui.core" value="List Item 1" selectedKey="item1" selectedItemId="__item3" id="box1_1536131498015" placeholder="Serving">
+											<items>
+												<sap.ui.core:ListItem text="1" key="item1" id="item3_1536131498015"/>
+												<sap.ui.core:ListItem text="2" key="item2" id="item4_1536131498015"/>
+												<sap.ui.core:ListItem text="3" key="item3" id="item5_1536131498015"/></items>
+										</ComboBox>
+																				<!--</items>-->
+									</HBox>
+									<HBox>
+										<CheckBox id="box10" text="South Indian Combo   (600 Cal)" name="South Indian Combo" class="sapUiLargeMarginEnd"/>
+										<ComboBox xmlns:sap.ui.core="sap.ui.core" value="List Item 1" selectedKey="item1" selectedItemId="__item6" id="box2_1536131500893" placeholder="Serving">
+											<items>
+												<sap.ui.core:ListItem text="1" key="item1" id="item6_1536131500892"/>
+												<sap.ui.core:ListItem text="2" key="item2" id="item7_1536131500892"/>
+												<sap.ui.core:ListItem text="3" key="item3" id="item8_1536131500893"/></items>
+										</ComboBox>
+										<!--</items>-->
+									</HBox>
+									<HBox>
+										<CheckBox id="box11" text="Biryani  (400 Cal)" name="Biryani" class="sapUiLargeMarginEnd"/>
+										<ComboBox xmlns:sap.ui.core="sap.ui.core" value="List Item 1" selectedKey="item1" selectedItemId="__item9" id="box3_1536131503613" placeholder="Serving">
+											<items>
+												<sap.ui.core:ListItem text="1" key="item1" id="item9_1536131503611"/>
+												<sap.ui.core:ListItem text="2" key="item2" id="item10_1536131503612"/>
+												<sap.ui.core:ListItem text="3" key="item3" id="item11_1536131503612"/></items>
+										</ComboBox>
+										<!--</items>-->
+									</HBox>
+									<HBox>
+										<CheckBox id="box12" text="Tandoori Combo   (400 Cal)" name="Tandoori Combo" class="sapUiLargeMarginEnd"/>
+										<ComboBox xmlns:sap.ui.core="sap.ui.core" value="List Item 1" selectedKey="item1" selectedItemId="__item12" id="box4_1536131506079" placeholder="Serving">
+											<items>
+												<sap.ui.core:ListItem text="1" key="item1" id="item12_1536131506077"/>
+												<sap.ui.core:ListItem text="2" key="item2" id="item13_1536131506078"/>
+												<sap.ui.core:ListItem text="3" key="item3" id="item14_1536131506078"/></items>
+										</ComboBox>
+										<!--</items>-->
+									</HBox>
+									<HBox>
+										<CheckBox id="box13" text="North Indian Combo   (500 Cal)" name="Veg/NonVeg Salad" class="sapUiLargeMarginEnd"/>
+										<ComboBox xmlns:sap.ui.core="sap.ui.core" value="List Item 1" selectedKey="item1" selectedItemId="__item0" id="box0_1536131520620">
+											<items>
+												<sap.ui.core:ListItem text="1" key="item1" id="item0_1536131520619"/>
+												<sap.ui.core:ListItem text="2" key="item2" id="item1_1536131520619"/>
+												<sap.ui.core:ListItem text="3" key="item3" id="item2_1536131520620"/>
+											</items>
+										</ComboBox>
+										<!--</items>-->
+									</HBox>
+								</content>
+							</IconTabFilter>
+							<!--</items>-->
+						</items>
+					</IconTabBar>
+				</content>
+				<footer>
+					<OverflowToolbar>
+					<ToolbarSpacer/>
+						
+					
+								<Button id="button0" text="Gain" width="100px" press="OnGain"/>
+						<!--<Button id="button0" text="GAIN" width="100px" press="OnGain"/>-->
+						<Button id="button1" text="Reset" width="100px" press="OnReset"/>
+					
+				</OverflowToolbar>
+					</footer>
+			</Page>
+			<Page title="Page 2" id="page1"/></pages>
+			<!--</sap.m.semantic:MasterPage> -->
+	</App>
+</mvc:View>

@@ -1,0 +1,51 @@
+<mvc:View xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"
+	controllerName="successhealth.SuccessHealth01.controller.Home" displayBlock="true">
+	<App id="idAppControl" backgroundImage="/webapp/images/SAP.png" width="100%" height = "100%">
+		<pages>
+			<Page title="{i18n>title}" icon="/webapp/images/HRA.png">
+				<content>
+					<TileContainer id="cont1">
+					
+						<tiles>
+							<!--<StandardTile info="Info" icon="/webapp/images/HRA.png" infoState="Success" id="hra" title="Health Risk Assessment"/>-->
+							<!--<StandardTile title="Health Goals" info="Info" icon="/webapp/images/HealthGoals.png" activeIcon="sap-icon://customer" infoState="Success"-->
+							<!--	id="healthgoal"/>-->
+							<!--<StandardTile title="Health Reports" info="Info" icon="/webapp/images/HealthReports.jpg" infoState="Success" id="report"/>-->
+							<!--<StandardTile title="Burn Calorie" info="Info" icon="/webapp/images/BurnCalories.jpg" activeIcon="sap-icon://customer" infoState="Success"-->
+							<!--	id="calorie"/>-->
+							<!--<StandardTile info="Info" icon="/webapp/images/Nutrition.jpg" infoState="Success" id="nutrition" title="Gain Nutrition"/>-->
+							<!--<StandardTile title="Ranking" info="Info" icon="/webapp/images/Ranking.png" infoState="Success" id="rank"/>-->
+							<!--<StandardTile title=" My Profile" info="Info" icon="sap-icon://employee" infoState="Success" id="profile" press=""/>-->
+							<!--<StandardTile title="My Rewards" info="Info" icon="/webapp/images/Rewards.png" infoState="Success" id="reward"/>-->
+							<!--<StandardTile title="Jam Group" info="Info" icon="sap-icon://jam" infoState="Success" id="jam"/>-->
+							<CustomTile id="cu1" visible="true" press="">
+								<content>
+									<Image id="img1" visible="true" src="/webapp/images/Nutrition.jpg" width="210px" height="255px" blocked="false" decorative="true" mode="Image" backgroundPosition ="top">
+									</Image>
+								</content> 
+							</CustomTile>
+							<CustomTile id="cu2" visible="true" press="">
+								<content>
+									<Image id="img2" visible="true" src="/webapp/images/Rewards.png" width="210px" height="255px" decorative="true" mode="Image">
+									</Image>
+								</content> 
+							</CustomTile>
+							<CustomTile id="cu3" visible="true" press="">
+								<content>
+									<Image id="img3" visible="true" src="/webapp/images/HRA.png" width="210px" height="255px" decorative="true" mode="Image">
+									</Image>
+								</content> 
+							</CustomTile>
+							<CustomTile id="cu4" visible="true" press="">
+								<content>
+									<Image id="img4" visible="true" src="/webapp/images/Ranking.png" width="210px" height="255px" decorative="true" mode="Image">
+									</Image>
+								</content> 
+							</CustomTile>
+						</tiles>
+					</TileContainer>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

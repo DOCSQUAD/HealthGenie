@@ -1,0 +1,96 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" controllerName="successhealth.SuccessHealth01.controller.HealthGoals" displayBlock="true">
+	<App xmlns="sap.m" id="idAppCont" height="100%" width="100%">
+		<pages>
+			<sap.m.semantic:MasterPage title="Health Goals" xmlns:sap.m.semantic="sap.m.semantic" id="page0" showNavButton="true"
+				backgroundDesign="Solid" navButtonPress="onNavBack">
+				<IconTabBar id="idIconTabBar" select="handleIconTabBarSelect" class="sapUiResponsiveContentPadding">
+					<items>
+						<IconTabFilter icon="sap-icon://goal" iconColor="Positive" count="3" text="Fitness Goals" key="Ok">
+							<content>
+								<Image visible="true" src="/webapp/images/FitnessGoals.png" width="700px" height="619px" decorative="true" mode="Image"></Image>
+								<!--<VBox class="sapUiSmallMarginTopBottom sapUiLargeMarginBeginEnd">-->
+								<!--	<HBox justifyContent="SpaceBetween">-->
+								<!--		<VBox>-->
+								<!--			<Text text="Gain 2kg weight in a month"/>-->
+								<!--			<Image visible="true" src="/webapp/images/weight.jpg" width="210px" height="255px" decorative="true" mode="Image"></Image>-->
+								<!--			<FormattedText htmlText="{/Weight}"/>-->
+								<!--		</VBox>-->
+								<!--		<VBox>-->
+								<!--			<Text text="Run/Ride for 30 minutes everyday"/>-->
+								<!--			<Image visible="true" src="/webapp/images/weight.jpg" width="210px" height="255px" decorative="true" mode="Image"></Image>-->
+								<!--			<FormattedText htmlText="{/Workout}"/>-->
+								<!--		</VBox>-->
+								<!--		<VBox>-->
+								<!--			<Text text="Burn 500K Calories everyday"/>-->
+								<!--			<Image visible="true" src="/webapp/images/weight.jpg" width="210px" height="255px" decorative="true" mode="Image"></Image>-->
+								<!--			<FormattedText htmlText="{/Calories}"/>-->
+								<!--		</VBox>-->
+								<!--		<VBox>-->
+								<!--			<Text id="detailsActiveImage" text="Active state image:" class="sapUiSmallMarginBottom"/>-->
+								<!--			<Image ariaDetails="detailsActiveImage" src="{img>/pic1}" width="{/imageWidth}" decorative="false" press="handleImage3Press"/>-->
+								<!--		</VBox>-->
+								<!--		<VBox>-->
+								<!--			<Text text="Image using SVG format:" class="sapUiSmallMarginBottom"/>-->
+								<!--			<Image src="{img>/pic1}"/>-->
+								<!--		</VBox>-->
+								<!--	</HBox>-->
+								<!--</VBox>-->
+							</content>
+						</IconTabFilter>
+						<IconTabFilter icon="sap-icon://activity-assigned-to-goal" iconColor="Critical" count="2" text="Nutrition Goals" key="Heavy">
+							<content>
+								<Image visible="true" src="/webapp/images/NutritionGoals.png" width="500px" height="619px" decorative="true" mode="Image"></Image>
+								<!--<VBox class="sapUiSmallMarginTopBottom sapUiLargeMarginBeginEnd">-->
+								<!--	<HBox justifyContent="SpaceBetween">-->
+								<!--		<VBox>-->
+								<!--			<Image visible="true" src="/webapp/images/weight.jpg" width="210px" height="255px" decorative="true" mode="Image"></Image>-->
+								<!--			<FormattedText htmlText="{/Water}"/>-->
+								<!--		</VBox>-->
+								<!--		<VBox>-->
+								<!--			<Image visible="true" src="/webapp/images/weight.jpg" width="210px" height="255px" decorative="true" mode="Image"></Image>-->
+								<!--			<FormattedText htmlText="{/Fruits}"/>-->
+								<!--		</VBox>-->
+								<!--		<VBox>-->
+								<!--			<Image visible="true" src="/webapp/images/weight.jpg" width="210px" height="255px" decorative="true" mode="Image"></Image>-->
+								<!--			<FormattedText htmlText="{/Sleep}"/>-->
+								<!--		</VBox>-->
+								<!--	</HBox>-->
+								<!--</VBox>-->
+							</content>
+						</IconTabFilter>
+						<IconTabFilter icon="sap-icon://family-protection" iconColor="Negative" count="2" text="Happiness Goals" key="Overweight">
+							<content>
+								<Image visible="true" src="/webapp/images/HappinessGoals.png" width="500px" height="619px" decorative="true" mode="Image"></Image>
+								<!--<VBox class="sapUiSmallMarginTopBottom sapUiLargeMarginBeginEnd">-->
+								<!--	<HBox justifyContent="SpaceBetween">-->
+								<!--		<VBox>-->
+								<!--			<Image visible="true" src="/webapp/images/weight.jpg" width="210px" height="255px" decorative="true" mode="Image"></Image>-->
+								<!--			<FormattedText htmlText="{/Meditate}"/>-->
+								<!--		</VBox>-->
+								<!--		<VBox>-->
+								<!--			<Image visible="true" src="/webapp/images/weight.jpg" width="210px" height="255px" decorative="true" mode="Image"></Image>-->
+								<!--			<FormattedText htmlText="{/Hobbies}"/>-->
+								<!--		</VBox>-->
+								<!--		<VBox>-->
+								<!--			<Image visible="true" src="/webapp/images/weight.jpg" width="210px" height="255px" decorative="true" mode="Image"></Image>-->
+								<!--			<FormattedText htmlText="{/Hobbies1}"/>-->
+								<!--		</VBox>-->
+								<!--	</HBox>-->
+								<!--</VBox>-->
+							</content>
+						</IconTabFilter>
+					</items>
+				</IconTabBar>
+				<!--<Panel class ="sapUiContentPadding">-->
+				<sap.m.semantic:addAction>
+					<sap.m.semantic:AddAction tooltip="Add" id="action0" press="onAdd"/>
+				</sap.m.semantic:addAction>
+				<!--<sap.m.semantic:deleteAction>-->
+				<!--	<sap.m.semantic:DeleteAction id="action1"/>-->
+				<!--</sap.m.semantic:deleteAction>-->
+				<sap.m.semantic:saveAction><sap.m.semantic:SaveAction id="onSaveGoals" press="onSave"/>
+				</sap.m.semantic:saveAction>
+			</sap.m.semantic:MasterPage>
+		</pages>
+	</App>
+</mvc:View>

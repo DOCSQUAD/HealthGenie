@@ -1,0 +1,16 @@
+/* Enter your custom styles here */
+.sapMImg{
+	width : 60px;
+	height : 100px;
+}
+
+.sapMGT{
+	border-style: solid;
+	border-width: thick;
+	border-color: black;
+	border-radius: 1.125em;
+}
+/*sapMTileContent*/
+.myCustomText {
+   font-weight: bold;
+}

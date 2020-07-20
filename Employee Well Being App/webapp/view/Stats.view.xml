@@ -1,0 +1,169 @@
+<core:View xmlns:core="sap.ui.core" xmlns="sap.m" xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form"
+	controllerName="successhealth.SuccessHealth01.controller.Stats" displayBlock="true">
+	<App id="idAppControl">
+		<pages>
+			<sap.m.semantic:MasterPage xmlns:sap.m.semantic="sap.m.semantic" id="Stats" title="Stats" showNavButton="true" navButtonPress="onNavBack" backgroundDesign="Solid">
+				<!--<content>-->
+				<IconTabBar selectedKey="__xmlview0--tab5" id="bar0">
+					<items>
+						<IconTabFilter text="Steps" showAll="true" id="tab1">
+							<content>
+								<Panel>
+									<Title text="Today" class="sapUiSmallMarginBottom"/>
+									<f:SimpleForm minWidth="1024" maxContainerCols="2" editable="true" layout="ResponsiveGridLayout">
+										<VBox>
+											<HBox>
+												<Title text="Distance:" class="sapUiTinyMarginEnd"/>
+												<Title text="0.47 km" class="sapUiTinyMarginEnd"/>
+											</HBox>
+											<HBox>
+												<Title text="Steps:" class="sapUiTinyMarginEnd"/>
+												<Title text="779" class="sapUiTinyMarginEnd"/>
+											</HBox>
+										</VBox>
+									</f:SimpleForm>
+								</Panel>
+								<Panel>
+									<Title text="Weekly Stats" class="sapUiSmallMarginBottom"/>
+									<f:SimpleForm minWidth="1024" maxContainerCols="2" editable="true" layout="ResponsiveGridLayout">
+										<VBox>
+											<HBox>
+												<Title text="Distance:" class="sapUiTinyMarginEnd"/>
+												<Title text="8.5 km" class="sapUiTinyMarginEnd"/>
+											</HBox>
+											<HBox>
+												<Title text="Steps:" class="sapUiTinyMarginEnd"/>
+												<Title text="11854" class="sapUiTinyMarginEnd"/>
+											</HBox>
+										</VBox>
+									</f:SimpleForm>
+								</Panel>
+								<Panel>
+									<Title text="Monthly" class="sapUiSmallMarginBottom"/>
+									<f:SimpleForm minWidth="1024" maxContainerCols="2" editable="true" layout="ResponsiveGridLayout">
+										<VBox>
+											<HBox>
+												<Title text="Distance:" class="sapUiTinyMarginEnd"/>
+												<Title text="41.9 km" class="sapUiTinyMarginEnd"/>
+											</HBox>
+											<HBox>
+												<Title text="Steps:" class="sapUiTinyMarginEnd"/>
+												<Title text="55K" class="sapUiTinyMarginEnd"/>
+											</HBox>
+										</VBox>
+									</f:SimpleForm>
+								</Panel>
+							</content>
+						</IconTabFilter>
+						<IconTabFilter id="tab2" text="Workout" showAll="true">
+							<content>
+								<Table id="activityTable1" items="{model3>/activities}">
+									<headerToolbar>
+										<Toolbar>
+											<Title text="Activities Today"></Title>
+											<ToolbarSpacer/>
+											<ComboBox selectedItem="Steps" value="Steps" selectedKey="steps" xmlns:sap.ui.core="sap.ui.core" selectedItemId="steps" id="combo1"
+												placeholder="SortBy">
+												<items>
+													<core:ListItem text="Activity" key="activity" id="act1"/>
+													<core:ListItem text="Time" key="time" id="time1"/>
+													<core:ListItem text="Distance" key="calories" id="dist1"/>
+													<core:ListItem text="Calories" key="name" id="cal1"/>
+												</items>
+											</ComboBox>
+										</Toolbar>
+									</headerToolbar>
+									<columns>
+										<Column id="actCol1" minScreenWidth="Tablet" demandPopin="true"><Text text="Activity"/></Column>
+										<Column id="timeCol1" demandPopin="true"><Text text="Time (in minutes)"/></Column>
+										<Column id="distCol1" demandPopin="true"><Text text="Distance (in kms)"/></Column>
+										<Column id="calCol1" demandPopin="true"><Text text="Calories burnt"/></Column>
+									</columns>
+									<items>
+										<ColumnListItem type="Active">
+											<cells>
+												<Text text="{model3>Activity}"/>
+												<Text text="{model3>Time}"/>
+												<Text text="{model3>Distance}"/>
+												<Text text="{model3>Calories}"/>
+											</cells>
+										</ColumnListItem>
+									</items>
+								</Table>
+							</content>
+						</IconTabFilter>
+						<IconTabFilter id="tab3" text="Water intake" showAll="true">
+							<content>
+								<VBox>
+									<HBox>
+										<Title text="Consumed" class="sapUiLargeMarginEnd"/>
+										<Title text="Target" class="sapUiSmallMarginBottom"/>
+									</HBox>
+									<HBox>
+										<Title text="2.00L" class="sapUiLargeMarginEnd"/>
+										<Title text="2.00L" class="sapUiMediumMarginBegin sapUiSmallMarginBottom"/>
+									</HBox>
+								</VBox>
+								<VBox>
+									<Image width="35em" height="15em" id="water" src="/webapp/images/water.png" class="sapUiMediumMarginBottom"/>
+								</VBox>
+								<VBox>
+									<Title text="Wohooooo!!"/>
+									<Title text="You completed your daily task. Drink more if you feel thirsty" class="sapUiMediumMarginBottom"/>
+								</VBox>
+								<!--<VBox>-->
+								<!--	<Label text="Water Reminder"/>-->
+								<!--	<Label text="Remind me 2times"/>-->
+								<!--</VBox>-->
+							</content>
+						</IconTabFilter>
+						<IconTabFilter text="Sleep" showAll="true" id="tab4">
+							<VBox>
+								<Title text="Yesterday: 5h55m"/>
+								<VBox>
+									<!--<Title text="5h55m" textAlign="Center" class="sapUiLargeMarginBegin"/>-->
+									<ProgressIndicator width="50%" class="sapUiSmallMarginBottom" percentValue="19" displayValue="19%" showValue="true" state="None"/>
+									<!--<HBox>-->
+									<Title text="Deep Sleep: 1h09m (19%) " class="sapUiMediumMarginEnd"/>
+									<Title text="Light Sleep: 4h46m (81%) "/>
+									<!--</HBox>-->
+									<Title text="Time Awake: 0min" class="sapUiMediumMarginBottom"/>
+								</VBox>
+								<VBox>
+									<Title text="Sleep Quality Analysis" width="100%" id="label4_1" class="sapUiSmallMarginBottom"/>
+								</VBox>
+								<HBox>
+									<Image width="3em" height="3em" id="sleep1" src="/webapp/images/moon.png"/>
+									<VBox>
+										<Title level="H1" text="Fell asleep too late"/>
+										<Title level="H2" text="Try going to bed around 22:00. Staying up late isn't good for your immune system and speeds up ageing." class="sapUiSmallMarginBottom"/>
+									</VBox>
+								</HBox>
+								<HBox>
+									<Image width="3em" height="3em" id="sleep2" src="/webapp/images/sad.jpg"/>
+									<VBox>
+										<Title level="H1" text="You didn't have enough sleep"/>
+										<Title level="H2" text="It's better to sleep for 7-9 hours everyday. Lack of sleep may cause physical and mental damages." class="sapUiSmallMarginBottom"/>
+									</VBox>
+								</HBox>
+								<HBox>
+									<Image width="3em" height="3em" id="sleep3" src="/webapp/images/tea.png"/>
+									<VBox>
+										<Title level="H1" text="Deep sleep time is short"/>
+										<Title level="H2"
+											text="Don't strain yourself too much, keep good mood, make reasonable arrangements for work and rest time, and do more exercises to keep fit" class="sapUiSmallMarginBottom"/>
+									</VBox>
+								</HBox>
+							</VBox>
+						</IconTabFilter>
+					</items>
+				</IconTabBar>
+			<!--	<sap.m.semantic:addAction>-->
+			<!--		<sap.m.semantic:AddAction tooltip="Add" id="action0" press="onAdd"/>-->
+			<!--	</sap.m.semantic:addAction>-->
+			<!--	<sap.m.semantic:saveAction><sap.m.semantic:SaveAction id="save" press="onSave"/>-->
+			<!--	</sap.m.semantic:saveAction>-->
+			</sap.m.semantic:MasterPage>
+		</pages>
+	</App>
+</core:View>

@@ -1,0 +1,63 @@
+{
+	"names": [{
+		"Rank": 1,
+		"Name": "Akhila Gadagkar",
+		"Steps": 8000,
+		"Calories": 320
+	}, {
+		"Rank": 2,
+		"Name": "Rohit Malhotra",
+		"Steps": 6500,
+		"Calories": 260
+	}, {
+		"Rank": 3,
+		"Name": "Anagha Gadagkar",
+		"Steps": 6250,
+		"Calories": 250
+	}, {
+		"Rank": 4,
+		"Name": "Jatin Nijhawan",
+		"Steps": 6000,
+		"Calories": 240
+	}, {
+		"Rank": 5,
+		"Name": "Bidisha Tripathi",
+		"Steps": 4000,
+		"Calories": 152
+	}, {
+		"Rank": 6,
+		"Name": "Anita",
+		"Steps": 3800,
+		"Calories": 152
+	}, {
+		"Rank": 7,
+		"Name": "Dipanjan Nag",
+		"Steps": 3700,
+		"Calories": 148
+	}, {
+		"Rank": 8,
+		"Name": "Shwetank Mishra",
+		"Steps": 3200,
+		"Calories": 128
+	}, {
+		"Rank": 9,
+		"Name": "Akhila",
+		"Steps": 3100,
+		"Calories": 124
+	}, {
+		"Rank": 10,
+		"Name": "Karthik S",
+		"Steps": 2800,
+		"Calories": 112
+	}, {
+		"Rank": 11,
+		"Name": "Ekta Bharti",
+		"Steps": 2500,
+		"Calories": 100
+	}, {
+		"Rank": 12,
+		"Name": "Anisha Rao",
+		"Steps": 2200,
+		"Calories": 88
+	}]
+}

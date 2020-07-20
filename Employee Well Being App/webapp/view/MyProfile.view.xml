@@ -1,0 +1,48 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns:uxap="sap.uxap" controllerName="successhealth.SuccessHealth01.controller.MyProfile"
+	displayBlock="true" xmlns="sap.m" xmlns:core="sap.ui.core">
+	<Page backgroundDesign="Solid" class="sapUiResponsiveContentPadding" showNavButton="true" title="Health Genie" id="page0"
+		showFooter="true" navButtonPress="onNavBack">
+		<content>
+			<!--<Toolbar height="auto" width="auto"></Toolbar>-->
+			<!--<Toolbar>-->
+			<!--		<Title level="H3" text="Products" />-->
+			<!--		<ToolbarSpacer />-->
+			<!--		<Button icon="sap-icon://settings" press=".handleButtonPress" />-->
+			<!--	</Toolbar>-->
+			<uxap:ObjectPageLayout navigate="selectionChange">
+				<!--<Title text="Personal Information"/>-->
+				<uxap:headerTitle>
+					<uxap:ObjectPageHeader>
+						<Text text="Personal Information"/>
+					</uxap:ObjectPageHeader>
+				</uxap:headerTitle>
+				<uxap:sections>
+					<uxap:ObjectPageSection titleUppercase="false">
+						<uxap:subSections>
+							<uxap:ObjectPageSubSection>
+								<uxap:blocks>
+									<core:Fragment fragmentName="successhealth.SuccessHealth01.fragment.ProfileEdit" type="XML"/>
+									<core:Fragment fragmentName="successhealth.SuccessHealth01.fragment.ProfileDisplay" type="XML"/>
+								</uxap:blocks>
+							</uxap:ObjectPageSubSection>
+						</uxap:subSections>
+					</uxap:ObjectPageSection>
+				</uxap:sections>
+			</uxap:ObjectPageLayout>
+		</content>
+		<footer>
+			<OverflowToolbar>
+				<ToolbarSpacer/>
+				<Button id="EditButton" press="onEdit" text="Edit" visible="true" type="Emphasized">
+					<layoutData><OverflowToolbarLayoutData/></layoutData>
+				</Button>
+				<Button id="saveButton" press="onSave" text="Save" type="Transparent" visible="false">
+					<layoutData><OverflowToolbarLayoutData/></layoutData>
+				</Button>
+				<Button id="CancelButton" press="onQueryCancelPress" text="Cancel" visible="false">
+					<layoutData><OverflowToolbarLayoutData/></layoutData>
+				</Button>
+			</OverflowToolbar>
+		</footer>
+	</Page>
+</mvc:View>

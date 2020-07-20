@@ -1,0 +1,52 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form" xmlns:core="sap.ui.core">
+	<VBox id="ProfileEdit" class="sapUiSmallMargin" visible="false">
+		<f:SimpleForm
+			editable="true"
+			layout="ResponsiveGridLayout"
+			labelSpanXL="4"
+			labelSpanL="4"
+			labelSpanM="12"
+			labelSpanS="12"
+			adjustLabelSpan="false"
+			emptySpanXL="0"
+			emptySpanL="0"
+			emptySpanM="0"
+			emptySpanS="0"
+			columnsXL="2"
+			columnsL="2"
+			columnsM="1"
+			singleContainerFullSize="false">
+			<f:content>
+				<!--<core:Title text="Personal Display" />-->
+				<Label text="Name" />
+				<Input value="Anagha" type="Text" editable="false"/>
+				<Label text="Gender"/>
+				<RadioButtonGroup columns="2" select="onSchemaOrQuerySelect" selectedIndex="1" editable="false">
+					<buttons>
+						<RadioButton id="male" text="Male"/>
+						<RadioButton id="female" text="Female" selected="true"/>
+					</buttons>
+				</RadioButtonGroup>
+				<Label text="Age"/>
+				<Input value="24" editable="false"/>
+				<Label text="Weight (kg)"/>
+				<Input value="{47}" type="Number"/>
+				<Label text="Height(Ft/In" />
+				<Input value="{5 something}" type="Number"/>
+				<Label text="Occupation" />
+				<Select forceSelection="false" selectedKey="{/SelectedProduct}" items="{path: '/ProductCollection', sorter: { path: 'Name' }}">
+					<core:Item key="{ProductId}" text="{Name}"/>
+				</Select>
+				<!--<Select] change="onDocumentTypeChange" items="{DocumentTypeModel>/}" forceSelection="false"-->
+				<!--	selectedKey="{documentGeneralPropertiesModel>/DocumentFormat}">-->
+				<!--	<core:Item text="{DocumentTypeModel>key}" key="{DocumentTypeModel>key}"/>-->
+				<!--	<layoutData>-->
+				<!--		<l:GridData id="DocTypeGridData" span="L5 M5 S6"/>-->
+				<!--	</layoutData>-->
+				<!--</Select>-->
+				<Label text="SMS" />
+				<Input value="{Sms}" type="Tel" />
+			</f:content>
+		</f:SimpleForm>
+	</VBox>
+</core:FragmentDefinition>

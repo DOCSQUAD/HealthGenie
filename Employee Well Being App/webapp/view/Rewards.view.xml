@@ -1,0 +1,64 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns:uxap="sap.uxap" controllerName="successhealth.SuccessHealth01.controller.Rewards"
+	displayBlock="true" xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:f="sap.ui.layout.form">
+	<Page backgroundDesign="Solid" class="sapUiResponsiveContentPadding" showNavButton="true" title="My Rewards" id="page0"
+		showFooter="true" navButtonPress="onNavBack">
+		<content>
+			<VBox class="sapUiSmallMarginTopBottom sapUiLargeMarginBeginEnd">
+				<HBox justifyContent="SpaceBetween">
+					<VBox>
+						<Image visible="true" src="/webapp/images/16.png" width="145px" height="175px" decorative="true" mode="Image"></Image>
+						<FormattedText htmlText="{/Badge1}"/>
+					</VBox>
+					<VBox>
+						<Image visible="true" src="/webapp/images/17.png" width="155px" height="175px" decorative="true" mode="Image"></Image>
+						<FormattedText htmlText="{/Badge2}"/>
+					</VBox>
+					<VBox>
+						<Image visible="true" src="/webapp/images/18.png" width="155px" height="175px" decorative="true" mode="Image"></Image>
+						<FormattedText htmlText="{/Badge3}"/>
+					</VBox>
+					<VBox>
+						<Image visible="true" src="/webapp/images/19.png" width="155px" height="175px" decorative="true" mode="Image"></Image>
+						<FormattedText htmlText="{/Badge4}"/>
+					</VBox>
+				</HBox>
+				<HBox justifyContent="SpaceBetween">
+					<VBox>
+						<Image visible="true" src="/webapp/images/21.png" width="145px" height="175px" decorative="true" mode="Image"></Image>
+						<FormattedText htmlText="{/Badge5}"/>
+					</VBox>
+					<VBox>
+						<Image visible="true" src="/webapp/images/15.png" width="155px" height="175px" decorative="true" mode="Image"></Image>
+						<FormattedText htmlText="{/Badge6}"/>
+					</VBox>
+					<VBox>
+						<Image visible="true" src="/webapp/images/locked.png" width="155px" height="175px" decorative="true" mode="Image"></Image>
+						<FormattedText htmlText="{/Badge7}"/>
+					</VBox>
+					<VBox>
+						<Image visible="true" src="/webapp/images/locked.png" width="155px" height="175px" decorative="true" mode="Image"></Image>
+						<FormattedText htmlText="{/Badge8}"/>
+					</VBox>
+				</HBox>
+				<HBox justifyContent="SpaceBetween">
+					<VBox>
+						<Image visible="true" src="/webapp/images/locked.png" width="145px" height="175px" decorative="true" mode="Image"></Image>
+						<FormattedText htmlText="{/Badge9}"/>
+					</VBox>
+					<VBox>
+						<Image visible="true" src="/webapp/images/locked.png" width="155px" height="175px" decorative="true" mode="Image"></Image>
+						<FormattedText htmlText="{/Badge10}"/>
+					</VBox>
+					<VBox>
+						<Image visible="true" src="/webapp/images/locked.png" width="155px" height="175px" decorative="true" mode="Image"></Image>
+						<FormattedText htmlText="{/Badge11}"/>
+					</VBox>
+					<VBox>
+						<Image visible="true" src="/webapp/images/locked.png" width="155px" height="175px" decorative="true" mode="Image"></Image>
+						<FormattedText htmlText="{/Badge12}"/>
+					</VBox>
+				</HBox>
+			</VBox>
+		</content>
+	</Page>
+</mvc:View>

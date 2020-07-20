@@ -1,0 +1,37 @@
+<mvc:View controllerName="successhealth.SuccessHealth01.controller.Ranking" xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc">
+	<Page id="ranking" title="Leaderboard" showNavButton="true" navButtonPress="onNavBack" class="sapUiResponsiveContentPadding"  backgroundDesign="Solid">
+		<content>
+			<Table id="rankingTable" items="{model1>/names}">
+				<headerToolbar>
+					<Toolbar>
+						<ToolbarSpacer/>
+						<ComboBox selectedItem="Steps" value="Steps" selectedKey="steps" xmlns:sap.ui.core="sap.ui.core" selectedItemId="steps" id="combo" placeholder="FilterBy">
+							<items>
+								<sap.ui.core:ListItem text="Rank" key="rank" id="rank"/>
+								<sap.ui.core:ListItem text="Steps" key="steps" id="steps"/>
+								<sap.ui.core:ListItem text="Calories" key="calories" id="calories"/>
+								<sap.ui.core:ListItem text="Name" key="name" id="name"/>
+							</items>
+						</ComboBox>
+					</Toolbar>
+				</headerToolbar>
+				<columns>
+					<Column id="rankCol" minScreenWidth="Tablet" demandPopin="true"><Text text="Rank"/></Column>
+					<Column id="nameCol" demandPopin="true"><Text text="Name"/></Column>
+					<Column id="stepsCol" demandPopin="true"><Text text="Average number of Steps per day"/></Column>
+					<Column id="caloriesCol" minScreenWidth="Tablet" demandPopin="true"><Text text="Average number of calories burnt per day"/></Column>
+				</columns>
+				<items>
+					<ColumnListItem type="Active">
+						<cells>
+							<Text text="{model1>Rank}"/>
+							<Text text="{model1>Name}"/>
+							<Text text="{model1>Steps}"/>
+							<Text text="{model1>Calories}"/>
+						</cells>
+					</ColumnListItem>
+				</items>
+			</Table>
+		</content>
+	</Page>
+</mvc:View>

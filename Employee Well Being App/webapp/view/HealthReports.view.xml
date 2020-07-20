@@ -1,0 +1,25 @@
+<core:View controllerName="successhealth.SuccessHealth01.controller.HealthReports" xmlns="sap.m" xmlns:core="sap.ui.core"
+	xmlns:layout="sap.ui.layout" xmlns:viz="sap.viz.ui5.controls" xmlns:viz.data="sap.viz.ui5.data" xmlns:l="sap.ui.commons.layout"
+	xmlns:mvc="sap.ui.core.mvc">
+	<App>
+		<Page title="Health Report" showNavButton="true" navButtonPress="onNavBack" showFooter="true">
+			<content>
+				<Image visible="true" src="/webapp/images/HRAReport.png" width="1270px" height="1255px" decorative="true" mode="Image"></Image>
+			</content>
+			<footer>
+			<OverflowToolbar>
+				<ToolbarSpacer/>
+				<!--<Button id="EditButton" press="onEdit" text="Edit" visible="true" type="Emphasized">-->
+				<!--	<layoutData><OverflowToolbarLayoutData/></layoutData>-->
+				<!--</Button>-->
+				<Button id="saveButton" press="onNavToHealthGoals" text="Set Health Goals" type="Emphasized" visible="true">
+					<layoutData><OverflowToolbarLayoutData/></layoutData>
+				</Button>
+				<!--<Button id="CancelButton" press="onQueryCancelPress" text="Cancel" visible="true">-->
+				<!--	<layoutData><OverflowToolbarLayoutData/></layoutData>-->
+				<!--</Button>-->
+			</OverflowToolbar>
+		</footer>
+		</Page>
+	</App>
+</core:View>

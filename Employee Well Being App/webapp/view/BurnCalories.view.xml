@@ -1,0 +1,148 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.uxap" xmlns:layout="sap.ui.layout" xmlns:m="sap.m" xmlns:f="sap.ui.layout.form"
+	controllerName="successhealth.SuccessHealth01.controller.BurnCalories" height="100%" viewName="XML" displayBlock="true">
+	<m:Page id="BurnCalories" title="Burn Calories" showNavButton="true" navButtonPress="onNavBack">
+		<ObjectPageLayout id="ObjectPageLayout" alwaysShowContentHeader="true">
+			<!--<headerTitle>-->
+			<!--<ObjectPageHeader id="headerForTest" objectTitle="Denise Smith"-->
+			<!--	objectSubtitle="Example of a ObjectPage with Header Content always shown on desktop"></ObjectPageHeader>-->
+			<!--</headerTitle>-->
+			<headerContent>
+				<!--<m:Carousel activePage="__image1" id="carousel0" loop="true" width="40%" height="60%">-->
+				<!--	<m:pages>-->
+				<!--		<m:Image width="300px" height="250px" id="image1" src="/webapp/images/Nutrition.jpg"/>-->
+				<!--		<m:Image width="300px" height="250px" id="image2" src="/webapp/images/BurnCalories.jpg"/>-->
+				<!--		<m:Image width="300px" height="250px" id="image3" src="/webapp/images/Rewards.png"/>-->
+				<!--	</m:pages>-->
+				<!--</m:Carousel>-->
+				<!--<layout:VerticalLayout>-->
+				<!--	<m:ObjectStatus title="User ID" text="12345678"/>-->
+				<!--	<m:ObjectStatus title="Functional Area" text="Developement"/>-->
+				<!--	<m:ObjectStatus title="Cost Center" text="PI DFA GD Programs and Product"/>-->
+				<!--	<m:ObjectStatus title="Email" text="email@address.com"/>-->
+				<!--</layout:VerticalLayout>-->
+				<m:Text width="200px" text="My Total Steps: 48700"/>
+				<m:Text width="200px" text=""/>
+				<m:Text width="200px" text="Total Calories Burnt : 4.7kCal"/>
+				<m:Text width="200px" text="Progress : 60%"/>
+				<!--<m:ObjectStatus text="In Stock" state="Error"/>-->
+				<!--<m:ObjectStatus title="Label" text="In Stock" state="Warning"/>-->
+			</headerContent>
+			<sections>
+				<ObjectPageSection title="Info">
+					<subSections>
+						<ObjectPageSubSection title="Info">
+							<blocks>
+								<m:Carousel activePage="__image1" id="carousel0" loop="true" width="100%" height="100%">
+									<m:pages>
+										<m:Image width="300px" height="250px" id="image1" src="/webapp/images/Cycling.png"/>
+										<m:Image width="300px" height="250px" id="image2" src="/webapp/images/running.jpg"/>
+										<m:Image width="300px" height="250px" id="image3" src="/webapp/images/yoga.jpg"/>
+									</m:pages>
+								</m:Carousel>
+							</blocks>
+						</ObjectPageSubSection>
+					</subSections>
+				</ObjectPageSection>
+				<ObjectPageSection title="Fit@SAP">
+					<subSections>
+						<ObjectPageSubSection title="Fit@SAP">
+							<blocks>
+								<m:Link text="Connect to Fit@SAP" press="handleLinkPress" href="https://fiorilaunchpad.sap.com/sites#fitsap-Display"/>
+							</blocks>
+						</ObjectPageSubSection>
+					</subSections>
+				</ObjectPageSection>
+				<ObjectPageSection title="Record Activity">
+					<subSections>
+						<ObjectPageSubSection title="">
+							<blocks>
+								<!--<m:Label id="phone" text="Hi1"/>-->
+								<!--<m:Label id="social" text="Hi1"/>-->
+								<!--<m:Label id="adresses" text="Hi1"/>-->
+								<!--<m:Label id="mailing" text="Hi1"/>-->
+								<m:FlexBox>
+									<m:VBox>
+										<m:HBox>
+											<m:VBox>
+												<m:Label text="Select Activity" width="80%" id="activity" class="sapUiSmallMarginEnd"/>
+												<m:ComboBox width="50%" selectedItem="Running" value="Select Activity" selectedKey="running" selectedItemId="running"
+													xmlns:sap.ui.core="sap.ui.core" id="combo" class="sapUiSmallMarginEnd">
+													<m:items>
+														<sap.ui.core:ListItem text="Running" key="running" id="running"/>
+														<sap.ui.core:ListItem text="Cycling" key="cycling" id="cycling"/>
+														<sap.ui.core:ListItem text="Swimming" key="swimming" id="swimming"/>
+														<sap.ui.core:ListItem text="Dancing" key="dancing" id="dancing"/>
+														<sap.ui.core:ListItem text="Sports" key="sports" id="sports"/>
+														<sap.ui.core:ListItem text="Gym" key="gym" id="gym"/>
+													</m:items>
+												</m:ComboBox>
+											</m:VBox>
+											<m:HBox>
+												<m:VBox>
+													<m:Label text="Time (in minutes)" width="80%" id="time_l" class="sapUiSmallMarginEnd"/>
+													<m:Input width="50%" id="time_i" class="sapUiSmallMarginEnd"/>
+												</m:VBox>
+												<m:VBox>
+													<m:Label text="Distance (in km)" width="80%" id="dist_l" class="sapUiSmallMarginEnd"/>
+													<m:Input width="50%" id="dist_i" class="sapUiSmallMarginEnd"/>
+												</m:VBox>
+											</m:HBox>
+										</m:HBox>
+										<m:FlexBox justifyContent="Center">
+											<m:Button type="Emphasized" text="Submit" width="100px" id="submit"/>
+										</m:FlexBox>
+									</m:VBox>
+								</m:FlexBox>
+							</blocks>
+						</ObjectPageSubSection>
+						<!--<ObjectPageSubSection id="paymentSubSection" title="Payment information">-->
+						<!--	<blocks>-->
+						<!--		<m:Label id="part1"/>-->
+						<!--	</blocks>-->
+						<!--</ObjectPageSubSection>-->
+					</subSections>
+				</ObjectPageSection>
+				<ObjectPageSection title="Past activities">
+					<subSections>
+						<ObjectPageSubSection title="Past Activities">
+							<blocks>
+								<m:Table id="activityTable" items="{model2>/activities}">
+									<m:headerToolbar>
+										<m:Toolbar>
+											<m:ToolbarSpacer/>
+											<m:ComboBox selectedItem="Steps" value="Steps" selectedKey="steps" xmlns:sap.ui.core="sap.ui.core" selectedItemId="steps" id="combo1"
+												placeholder="SortBy">
+												<m:items>
+													<sap.ui.core:ListItem text="Activity" key="activity" id="act"/>
+													<sap.ui.core:ListItem text="Time" key="time" id="time"/>
+													<sap.ui.core:ListItem text="Distance" key="calories" id="dist"/>
+													<sap.ui.core:ListItem text="Calories" key="name" id="cal"/>
+												</m:items>
+											</m:ComboBox>
+										</m:Toolbar>
+									</m:headerToolbar>
+									<m:columns>
+										<m:Column id="actCol" minScreenWidth="Tablet" demandPopin="true"><m:Text text="Activity"/></m:Column>
+										<m:Column id="timeCol" demandPopin="true"><m:Text text="Time (in minutes)"/></m:Column>
+										<m:Column id="distCol" demandPopin="true"><m:Text text="Distance (in kms)"/></m:Column>
+										<m:Column id="calCol" demandPopin="true"><m:Text text="Calories burnt"/></m:Column>
+									</m:columns>
+									<m:items>
+										<m:ColumnListItem type="Active">
+											<m:cells>
+												<m:Text text="{model2>Activity}"/>
+												<m:Text text="{model2>Time}"/>
+												<m:Text text="{model2>Distance}"/>
+												<m:Text text="{model2>Calories}"/>
+											</m:cells>
+										</m:ColumnListItem>
+									</m:items>
+								</m:Table>
+							</blocks>
+						</ObjectPageSubSection>
+					</subSections>
+				</ObjectPageSection>
+			</sections>
+		</ObjectPageLayout>
+	</m:Page>
+</mvc:View>

@@ -1,0 +1,18 @@
+{
+	"activities": [{
+		"Activity": "Cycling",
+		"Time": 50,
+		"Distance": 2,
+		"Calories": 500
+	}, {
+		"Activity": "Dancing",
+		"Time": 30,
+		"Distance": "NA",
+		"Calories": 1500
+	}, {
+		"Activity": "Gym",
+		"Time": 60,
+		"Distance": "NA",
+		"Calories": 800
+	}]
+}

@@ -1,0 +1,24 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form" xmlns:core="sap.ui.core">
+	<Dialog title="Health Goals" id="dialog3" showHeader="true">
+		<!--<l:Grid width="auto" id="idGrid1">-->
+			<!--<l:content>-->
+				<f:SimpleForm id="SimpleFormDisplay3541" minWidth="1024" maxContainerCols="2" editable="true" layout="ResponsiveGridLayout"> 
+				<!--	<f:content>-->
+				<VBox>
+					<Title text="Congratulations!!" class="sapUiTinyMarginBottom"/>
+					<Label text="You have set 3 Fitness Goals, 2 Nutrition Goals and 2 Happiness Goals" class="sapUiSmallMarginBottom"/>
+					<!--<Image id="sad" src="/webapp/images/happy.jpg" width="35px" height="35px"/>-->
+				<!--</VBox>-->
+				<!--<VBox>-->
+				<Label  text="To Help you track progress and achieve your Health Goals, make use of the Burn Calorie and Gain Nutrition tools." class="sapUiTinyMarginBottom"/>
+				<Label text="It’s time for Action now to achieve your goals!" class="sapUiSmallMarginBottom"/>
+				</VBox>
+				</f:SimpleForm>
+			<!--</l:content>-->
+		<!--</l:Grid>-->
+		<buttons>
+			<Button text="OK" press="onClose" type="Accept"/>
+			<!--<Button text="SET GOALS" press="onAct" type="Accept"/>-->
+		</buttons>
+	</Dialog>
+</core:FragmentDefinition>

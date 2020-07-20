@@ -1,0 +1,222 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns:uxap="sap.uxap" controllerName="successhealth.SuccessHealth01.controller.HRA"
+	displayBlock="true" xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:f="sap.ui.layout.form">
+	<Page backgroundDesign="Solid" class="sapUiResponsiveContentPadding" showNavButton="true" title="Health Risk Assessment" id="page0"
+		showFooter="true" navButtonPress="onNavBack">
+		<content>
+			<f:SimpleForm id="SimpleForm" editable="true" layout="ResponsiveGridLayout" adjustLabelSpan="false" singleContainerFullSize="true">
+				<f:content>
+					<Label text="Please enter your height in cm or feet."/>
+					<RadioButtonGroup id="height" columns="2" selectedIndex="0">
+						<buttons>
+							<RadioButton id="inch" text="In feet inch" selected="true"/>
+							<RadioButton id="cm" text="In cm"/>
+						</buttons>
+					</RadioButtonGroup>
+					<Label text="Height" required="true"/>
+					<Input value="{height}"/>
+					<Label text="Please enter your weight in kgs or pounds."/>
+					<RadioButtonGroup id="weight" columns="2" selectedIndex="0">
+						<buttons>
+							<RadioButton id="kg" text="In kg" selected="true"/>
+							<RadioButton id="pound" text="In pound"/>
+						</buttons>
+					</RadioButtonGroup>
+					<Label text="Weight" required="true"/>
+					<Input value="{weight}"/>
+					<Label text="Pick the option which best describes you"/>
+					<RadioButtonGroup id="food" columns="2" selectedIndex="0">
+						<buttons>
+							<RadioButton id="food1" text="I eat home cooked food" selected="true"/>
+							<RadioButton id="food2" text="I depend on take-away meals"/>
+						</buttons>
+					</RadioButtonGroup>
+					<Label text="How would you classify your lifestyle?"/>
+					<RadioButtonGroup id="lifestyle" columns="1" selectedIndex="0">
+						<buttons>
+							<RadioButton text="Sedentary (light or no exercise)" selected="true"/>
+							<RadioButton text="Lightly Active (Light exercise/ Sports 1-3 days a week)"/>
+							<RadioButton text="Moderately Active (Moderate exercise/ Sports 3-5 days a week)"/>
+							<RadioButton text="Very Active(Hard exercise/ Sports 6-7 days a week)"/>
+						</buttons>
+					</RadioButtonGroup>
+					<Label text="Please enter the umber of minutes of exercise in a day"/>
+					<Input value="{exercise}"/>
+					<Label text="How many glasses of water do you consume each day?"/>
+					<Input value="{water}"/>
+					<Label text="How many servings of fruits do you consume each day?"/>
+					<RadioButtonGroup id="fruits" columns="4" selectedIndex="0">
+						<buttons>
+							<RadioButton text="1-2" selected="true"/>
+							<RadioButton text="2-3"/>
+							<RadioButton text="4-5"/>
+							<RadioButton text="None"/>
+						</buttons>
+					</RadioButtonGroup>
+					<Label text="How many servings of nuts and seeds do you consume each day?"/>
+					<RadioButtonGroup id="nuts" columns="4" selectedIndex="0">
+						<buttons>
+							<RadioButton text="0-1 tbs" selected="true"/>
+							<RadioButton text="1-2 tbs"/>
+							<RadioButton text="2-4 tbs"/>
+							<RadioButton text="None"/>
+						</buttons>
+					</RadioButtonGroup>
+					<Label text="How many servings of lean meat, poultry, seafood do you consume each day?"/>
+					<RadioButtonGroup id="meat" columns="4" selectedIndex="0">
+						<buttons>
+							<RadioButton text="1-6" selected="true"/>
+							<RadioButton text="6-12"/>
+							<RadioButton text="More than 12"/>
+							<RadioButton text="None"/>
+						</buttons>
+					</RadioButtonGroup>
+					<Label text="How many hours in a day do you sleep?"/>
+					<RadioButtonGroup columns="5" selectedIndex="0">
+						<buttons>
+							<RadioButton text="Less than an hour" selected="true"/>
+							<RadioButton text="1-3 hours"/>
+							<RadioButton text="3-7 hours"/>
+							<RadioButton text="7-9 hours"/>
+							<RadioButton text="more than 9 hours"/>
+						</buttons>
+					</RadioButtonGroup>
+					<Label text="In the last week, how often have you been upset because of something that happened unexpectedly?"/>
+					<RadioButtonGroup id="unexpected" columns="5" selectedIndex="0">
+						<buttons>
+							<RadioButton text="Never" selected="true"/>
+							<RadioButton text="Almost never"/>
+							<RadioButton text="Sometimes"/>
+							<RadioButton text="Fairly often"/>
+							<RadioButton text="very often"/>
+						</buttons>
+					</RadioButtonGroup>
+					<Label text="In the last week, how often have you felt nervous and stressed?"/>
+					<RadioButtonGroup columns="5" selectedIndex="0">
+						<buttons>
+							<RadioButton text="Never" selected="true"/>
+							<RadioButton text="Almost never"/>
+							<RadioButton text="Sometimes"/>
+							<RadioButton text="Fairly often"/>
+							<RadioButton text="very often"/>
+						</buttons>
+					</RadioButtonGroup>
+					<Label text="In the last week, how often have you felt difficulties were piling up and you could not overcome them?"/>
+					<RadioButtonGroup columns="5" selectedIndex="0">
+						<buttons>
+							<RadioButton text="Never" selected="true"/>
+							<RadioButton text="Almost never"/>
+							<RadioButton text="Sometimes"/>
+							<RadioButton text="Fairly often"/>
+							<RadioButton text="very often"/>
+						</buttons>
+					</RadioButtonGroup>
+					<Label text="During your wake time, do you feel tired, fatigued or not up to par?"/>
+					<RadioButtonGroup columns="5" selectedIndex="0">
+						<buttons>
+							<RadioButton text="Nearly everyday" selected="true"/>
+							<RadioButton text="3-4 times a week"/>
+							<RadioButton text="1-2 times a week"/>
+							<RadioButton text="1-2 times a month"/>
+							<RadioButton text="Never or nearly never"/>
+						</buttons>
+					</RadioButtonGroup>
+					<Label text="Have you ever been diagnosed with hypertension or high blood pressure?"/>
+					<RadioButtonGroup id="tension" columns="3" selectedIndex="0">
+						<buttons>
+							<RadioButton id="tension1" text="Yes" selected="true"/>
+							<RadioButton id="tension2" text="No"/>
+						</buttons>
+					</RadioButtonGroup>
+					<Label text="Do you suffer form any of the following?"/>
+					<VBox>
+						<CheckBox text="Blurred Vision"/>
+						<CheckBox text="Fatigue or lack of energy"/>
+						<CheckBox text="Extreme Hunger"/>
+						<CheckBox text="Unexplained weight loss or gain"/>
+					</VBox>
+					<Label text="Please tell us about your smoking habits. Are you a:"/>
+					<RadioButtonGroup id="smoking" columns="3" selectedIndex="0">
+						<buttons>
+							<RadioButton text="Smoker" selected="true"/>
+							<RadioButton text="Non-Smoker"/>
+						</buttons>
+					</RadioButtonGroup>
+					<Label text="How much alcohol do you consume in a week? (1 unit = 25ml)"/>
+					<RadioButtonGroup id="alcohol" columns="3" selectedIndex="0">
+						<buttons>
+							<RadioButton text="2-3 units" selected="true"/>
+							<RadioButton text="moe than 2-3 units"/>
+							<RadioButton text="less than 2-3 units "/>
+						</buttons>
+					</RadioButtonGroup>
+				</f:content>
+			</f:SimpleForm>
+			<!--<uxap:ObjectPageLayout navigate="selectionChange">-->
+			<!--	<uxap:headerTitle>-->
+			<!--		<uxap:ObjectPageHeader>-->
+			<!--			<Text text="Health Risk Assessment"/>-->
+			<!--		</uxap:ObjectPageHeader>-->
+			<!--	</uxap:headerTitle>-->
+			<!--	<uxap:sections>-->
+			<!--		<uxap:ObjectPageSection titleUppercase="false">-->
+			<!--			<uxap:subSections>-->
+			<!--				<uxap:ObjectPageSubSection>-->
+			<!--					<f:SimpleForm id="SimpleFormChange480_12120-2" editable="true" layout="ResponsiveGridLayout" labelSpanXL="4" labelSpanL="4" labelSpanM="12"-->
+			<!--						labelSpanS="12" adjustLabelSpan="false" emptySpanXL="0" emptySpanL="0" emptySpanM="0" emptySpanS="0" columnsXL="2" columnsL="2" columnsM="1"-->
+			<!--						singleContainerFullSize="false">-->
+			<!--						<f:content>-->
+			<!--							<core:Title text="Vitals (Please enter the vital details in last 6 months)"/>-->
+			<!--							<Label text="Height (in ft)" required="true"/>-->
+			<!--							<Input value="{EMail}"/>-->
+			<!--							<Label text="Weight (in kg)" required="true"/>-->
+			<!--							<Input value="{Tel}"/>-->
+			<!--						</f:content>-->
+			<!--					</f:SimpleForm>-->
+			<!--					</uxap:ObjectPageSubSection>-->
+			<!--					<uxap:ObjectPageSubSection>-->
+			<!--					<f:SimpleForm editable="true" layout="ResponsiveGridLayout" labelSpanXL="4" labelSpanL="4" labelSpanM="12" labelSpanS="12"-->
+			<!--						adjustLabelSpan="false" emptySpanXL="0" emptySpanL="0" emptySpanM="0" emptySpanS="0" columnsXL="2" columnsL="2" columnsM="1"-->
+			<!--						singleContainerFullSize="false">-->
+			<!--						<f:content>-->
+			<!--							<core:Title text="Blood Pressure Details"/>-->
+			<!--							<Label text="Upper Value"/>-->
+			<!--							<Input value="{EMail}"/>-->
+			<!--							<Label text="Lower Value"/>-->
+			<!--							<Input value="{Tel}"/>-->
+			<!--						</f:content>-->
+			<!--					</f:SimpleForm>-->
+			<!--				</uxap:ObjectPageSubSection>-->
+			<!--				<uxap:ObjectPageSubSection>-->
+			<!--					<f:SimpleForm editable="true" layout="ResponsiveGridLayout" labelSpanXL="4" labelSpanL="4" labelSpanM="12" labelSpanS="12"-->
+			<!--						adjustLabelSpan="false" emptySpanXL="0" emptySpanL="0" emptySpanM="0" emptySpanS="0" columnsXL="2" columnsL="2" columnsM="1"-->
+			<!--						singleContainerFullSize="false">-->
+			<!--						<f:content>-->
+			<!--							<core:Title text="Personal Health"/>-->
+			<!--							<Label text="Upper Value"/>-->
+			<!--							<Input value="{EMail}"/>-->
+			<!--							<Label text="Lower Value"/>-->
+			<!--							<Input value="{Tel}"/>-->
+			<!--						</f:content>-->
+			<!--					</f:SimpleForm>-->
+			<!--				</uxap:ObjectPageSubSection>-->
+			<!--			</uxap:subSections>-->
+			<!--		</uxap:ObjectPageSection>-->
+			<!--	</uxap:sections>-->
+			<!--</uxap:ObjectPageLayout>-->
+		</content>
+		<footer>
+			<OverflowToolbar>
+				<ToolbarSpacer/>
+				<!--<Button id="EditButton" press="onEdit" text="Edit" visible="true" type="Emphasized">-->
+				<!--	<layoutData><OverflowToolbarLayoutData/></layoutData>-->
+				<!--</Button>-->
+				<Button id="saveButton" press="onSave" text="Save" type="Transparent" visible="true">
+					<layoutData><OverflowToolbarLayoutData/></layoutData>
+				</Button>
+				<Button id="CancelButton" press="onQueryCancelPress" text="Cancel" visible="true">
+					<layoutData><OverflowToolbarLayoutData/></layoutData>
+				</Button>
+			</OverflowToolbar>
+		</footer>
+	</Page>
+</mvc:View>

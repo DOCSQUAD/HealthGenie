@@ -1,0 +1,59 @@
+<mvc:View xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:l="sap.ui.layout"
+	controllerName="successhealth.SuccessHealth01.controller.Home" displayBlock="true">
+	<App id="idAppControl" backgroundImage="/webapp/images/SAP.png" width="100%" height="100%">
+		<pages>
+			<Page title="{i18n>title}" backgroundDesign="Solid">
+				<customHeader>
+					<Bar>
+						<contentMiddle>
+							<Title level="H1" tooltip="{i18n>title}" text="{i18n>title}"/>
+						</contentMiddle>
+						<contentRight>
+							<Button icon="sap-icon://customer" press=".onAvatarPress" tooltip="{i18n>avatarButtonTooltip}"/>
+						</contentRight>
+					</Bar>
+				</customHeader>
+				<content>
+					<TileContainer id="cont1">
+						<tiles>
+							<StandardTile info="Last HRA : 07/20/20" icon="/webapp/images/HRA.png" infoState="Success" id="hra" title=" Take Health Risk Assessment"
+								press="onNavToHRA"/>
+							<StandardTile title="Health Report" icon="/webapp/images/HealthReports.jpg" infoState="Success" id="report" press="onNavToHealthReports"/>
+							<StandardTile title="Health Goals" info="7 Goals Set" icon="/webapp/images/HealthGoals.png" activeIcon="sap-icon://customer"
+								infoState="Success" id="healthgoal" press="onNavToGoals"/>
+							<StandardTile title="Burn Calorie" info="Last Updated: 07/20/20" icon="/webapp/images/BurnCalories.jpg" activeIcon="sap-icon://customer"
+								infoState="Success" id="calorie" press="onNavToBurnCalories"/>
+							<StandardTile info="Last Updated: 07/20/20" icon="/webapp/images/Nutrition.jpg" infoState="Success" id="nutrition" title="Gain Nutrition"
+								press="onNavToGainNutrition"/>
+							<StandardTile title="Stats" info="" icon="sap-icon://filter-analytics" infoState="Success" id="stats" press="onNavToStats"/>
+							<StandardTile title="Challenges" info="Challenges Enrolled: 1" icon="/webapp/images/challenge.png" infoState="Success" id="profile"
+								press="onNavToChallenges"/>
+							<StandardTile title="Ranking" info="Position: 6" icon="/webapp/images/Ranking.png" infoState="Success" id="rank" press="onNavToRanking"/>
+							<StandardTile title="My Rewards" icon="/webapp/images/Rewards.png" infoState="Success" id="reward" info="Total badges earned: 6"
+								press="onNavToRewards"/>
+							<StandardTile title="Discussion Forum" icon="sap-icon://jam" infoState="Success" id="disc" press="onNavToDiscussion" info="12 Users Online"/>
+						</tiles>
+						<!--<tiles>-->
+						<!--	<StandardTile info="Last HRA :" icon="/webapp/images/HRA.png" infoState="Success" id="hra" title=" Take Health Risk Assessment"-->
+						<!--		press="onNavToHRA"/>-->
+						<!--	<StandardTile title="Health Report" icon="/webapp/images/HealthReports.jpg" infoState="Success" id="report" press="onNavToHealthReports"/>-->
+						<!--	<StandardTile title="Health Goals" info="No Goals Yet" icon="/webapp/images/HealthGoals.png" activeIcon="sap-icon://customer"-->
+						<!--		infoState="Success" id="healthgoal" press="onNavToGoals"/>-->
+						<!--	<StandardTile title="Burn Calorie" info="Last Updated: " icon="/webapp/images/BurnCalories.jpg" activeIcon="sap-icon://customer"-->
+						<!--		infoState="Success" id="calorie" press="onNavToBurnCalories"/>-->
+						<!--	<StandardTile info="Last Updated: " icon="/webapp/images/Nutrition.jpg" infoState="Success" id="nutrition" title="Gain Nutrition"-->
+						<!--		press="onNavToGainNutrition"/>-->
+						<!--	<StandardTile title="Stats" info="" icon="sap-icon://filter-analytics" infoState="Success" id="stats" press="onNavToStats"/>-->
+						<!--	<StandardTile title="Challenges" info="0 Challenges" icon="/webapp/images/challenge.png" infoState="Success" id="profile"-->
+						<!--		press="onNavToChallenges"/>-->
+						<!--	<StandardTile title="Ranking" info="Position: 0" icon="/webapp/images/Ranking.png" infoState="Success" id="rank" press="onNavToRanking"/>-->
+						<!--	<StandardTile title="My Rewards" icon="/webapp/images/Rewards.png" infoState="Success" id="reward" info="Total badges earned: 0"-->
+						<!--		press="onNavToRewards"/>-->
+						<!--	<StandardTile title="Discussion Forum" icon="sap-icon://jam" infoState="Success" id="disc" press="onNavToDiscussion" info="12 Users Online"/>-->
+						<!--</tiles>-->
+					</TileContainer>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

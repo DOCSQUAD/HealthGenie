@@ -1,0 +1,20 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form" xmlns:core="sap.ui.core">
+	<Dialog title="HRA Result" id="dialog2">
+		<l:Grid defaultSpan="L12 M12 S12" width="auto" id="idGrid1">
+			<l:content>
+				<!--<f:SimpleForm id="SimpleFormDisplay3541" minWidth="1024" maxContainerCols="2" editable="true" layout="ResponsiveGridLayout">-->
+				<!--	<f:content>-->
+				<Text text="Thank you for completing your HRA"/>
+				<!--<HBox>-->
+					<Text text="Your overall wellness score is 61"/>
+					<Text text="For detailed reports please check the reports section"/>
+					<!--<Image id="sad" src="/webapp/images/sad.png" width="40px" height="40px"/>-->
+				<!--</HBox>-->
+			</l:content>
+		</l:Grid>
+		<buttons>
+			<Button text="Detailed Reports" press="onAct" type="Emphasized"/>
+			<Button text="Close" press="onClose" type="Transparent"/>
+		</buttons>
+	</Dialog>
+</core:FragmentDefinition>

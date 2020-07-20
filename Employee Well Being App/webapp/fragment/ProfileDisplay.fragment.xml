@@ -1,0 +1,35 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form" xmlns:core="sap.ui.core">
+	<VBox id="ProfileDisplay" class="sapUiSmallMargin" visible="true">
+		<f:SimpleForm
+			editable="false"
+			layout="ResponsiveGridLayout"
+			labelSpanXL="4"
+			labelSpanL="4"
+			labelSpanM="12"
+			labelSpanS="12"
+			adjustLabelSpan="false"
+			emptySpanXL="0"
+			emptySpanL="0"
+			emptySpanM="0"
+			emptySpanS="0"
+			columnsXL="2"
+			columnsL="2"
+			columnsM="1"
+			singleContainerFullSize="false">
+			<f:content>
+				<Label text="Name" />
+				<Text text="Anagha"/>
+				<Label text="Gender"/>
+				<Text text="Female"/>
+				<Label text="Age" />
+				<Text text="24"/>
+				<Label text="Weight (kg)" />
+				<Text text="47"/>
+				<Label text="Height(Ft/In" />
+				<Text text="whatever"/>
+				<Label text="Occupation" />
+				<Text text="Definitely something"/>
+			</f:content>
+		</f:SimpleForm>
+	</VBox>
+</core:FragmentDefinition>

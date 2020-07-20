@@ -1,0 +1,370 @@
+<core:View xmlns:core="sap.ui.core" xmlns="sap.m" xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form"
+	controllerName="successhealth.SuccessHealth01.controller.HRA" displayBlock="true">
+	<App id="idAppControl">
+		<pages>
+			<sap.m.semantic:MasterPage xmlns:sap.m.semantic="sap.m.semantic" id="HRA" title="Health Risk Assessment" showNavButton="true"
+				backgroundDesign="Solid" navButtonPress="onNavBack">
+				<!--<content>-->
+				<IconTabBar selectedKey="__xmlview0--tab5" id="bar0" class="sapUiResponsiveContentPadding">
+					<items>
+						<IconTabFilter text="Vitals" showAll="true">
+							<content>
+								<VBox class="sapUiSmallMargin">
+									<f:SimpleForm id="SimpleFormChange480_12120-2" editable="true" layout="ResponsiveGridLayout" labelSpanXL="4" labelSpanL="4"
+										labelSpanM="12" labelSpanS="12" adjustLabelSpan="false" emptySpanXL="0" emptySpanL="0" emptySpanM="0" emptySpanS="0" columnsXL="2"
+										columnsL="2" columnsM="1" singleContainerFullSize="false">
+										<f:content>
+											<core:Title text="Vitals (Please enter the vital details in last 6 months)"/>
+											<Label text="Height (in ft)" required="true"/>
+											<Input value="{EMail}"/>
+											<Label text="Weight (in kg)" required="true"/>
+											<Input value="{Tel}"/>
+										</f:content>
+									</f:SimpleForm>
+									<f:SimpleForm editable="true" layout="ResponsiveGridLayout" labelSpanXL="4" labelSpanL="4"
+										labelSpanM="12" labelSpanS="12" adjustLabelSpan="false" emptySpanXL="0" emptySpanL="0" emptySpanM="0" emptySpanS="0" columnsXL="2"
+										columnsL="2" columnsM="1" singleContainerFullSize="false">
+										<f:content>
+											<core:Title text="Blood Pressure Details"/>
+											<Label text="Upper Value"/>
+											<Input value="{EMail}"/>
+											<Label text="Lower Value"/>
+											<Input value="{Tel}"/>
+										</f:content>
+									</f:SimpleForm>
+								</VBox>
+							</content>
+						</IconTabFilter>
+						<!--<IconTabFilter text="Personal Health" showAll="true">-->
+						<!--	<content>-->
+						<!--		<VBox class="sapUiSmallMargin">-->
+						<!--			<f:SimpleForm id="SimpleFormChange480_12120-2" editable="true" layout="ResponsiveGridLayout" labelSpanXL="4" labelSpanL="4"-->
+						<!--				labelSpanM="12" labelSpanS="12" adjustLabelSpan="false" emptySpanXL="0" emptySpanL="0" emptySpanM="0" emptySpanS="0" columnsXL="2"-->
+						<!--				columnsL="2" columnsM="1" singleContainerFullSize="false">-->
+						<!--				<f:content>-->
+						<!--					<core:Title text="Vitals (Please enter the vital details in last 6 months)"/>-->
+						<!--					<Label text="Height (in ft)" required="true"/>-->
+						<!--					<Input value="{EMail}"/>-->
+						<!--					<Label text="Weight (in kg)" required="true"/>-->
+						<!--					<Input value="{Tel}"/>-->
+						<!--				</f:content>-->
+						<!--			</f:SimpleForm>-->
+						<!--			<f:SimpleForm editable="true" layout="ResponsiveGridLayout" labelSpanXL="4" labelSpanL="4"-->
+						<!--				labelSpanM="12" labelSpanS="12" adjustLabelSpan="false" emptySpanXL="0" emptySpanL="0" emptySpanM="0" emptySpanS="0" columnsXL="2"-->
+						<!--				columnsL="2" columnsM="1" singleContainerFullSize="false">-->
+						<!--				<f:content>-->
+						<!--					<core:Title text="Blood Pressure Details"/>-->
+						<!--					<Label text="Upper Value"/>-->
+						<!--					<Input value="{EMail}"/>-->
+						<!--					<Label text="Lower Value"/>-->
+						<!--					<Input value="{Tel}"/>-->
+						<!--				</f:content>-->
+						<!--			</f:SimpleForm>-->
+						<!--		</VBox>-->
+						<!--	</content>-->
+						<!--</IconTabFilter>-->
+						<!--<IconTabFilter text="Vitals" showAll="true" id="tab1">-->
+						<!--	<content>-->
+						<!--		<Label text="Update your Vitals [Please enter the vital details in last 6 months]" width="100%" id="label1_1" class="sapUiSmallMarginBottom"/>-->
+						<!--		<HBox>-->
+						<!--			<Label text="Height (in ft/inch)*" width="100%" id="label1_2" class="sapUiLargeMarginEnd"/>-->
+						<!--			<Input width="30%" id="input1_1" class="sapUiLargeMarginEnd"/>-->
+									<!--<Label text="feet" width="100%" id="label1_3" class="sapUiMarginBeginEnd"/>-->
+									<!--<Input width="100%" id="input1_2" class="sapUiLargeMarginEnd"/>-->
+									<!--<Label text="inches" width="100%" id="label1_4" class="sapUiLargeMarginEnd"/>-->
+						<!--		</HBox>-->
+						<!--		<HBox>-->
+						<!--			<Label text="Weight (in kg) *" width="100%" id="label1_5" class="sapUiLargeMarginEnd"/>-->
+						<!--			<Input width="30%" id="input1_3" class="sapUiLargeMarginEnd"/>-->
+									<!--<Label text="kg" width="100%" id="label1_6"/>-->
+						<!--		</HBox>-->
+						<!--		<Label text="Blood Pressure Details [Please enter Blood Pressure Details in last 6 months]" width="100%" id="label1_7"-->
+						<!--			class="sapUiLargeMarginTopBottom"/>-->
+						<!--		<HBox>-->
+						<!--			<Label text="Do you know your BP? *" width="100%" id="label1_8" class="sapUiSmallMarginEnd"/>-->
+						<!--			<RadioButton text="Yes" id="button1_1"/>-->
+						<!--			<RadioButton text="No" id="button1_2"/>-->
+						<!--		</HBox>-->
+						<!--		<HBox>-->
+						<!--			<Label text="Upper value" width="100%" id="label1_9" class="sapUiLargeMarginEnd"/>-->
+						<!--			<Input width="100%" id="input1_4" class="sapUiMediumMarginEnd"/>-->
+						<!--			<Label text="mm Hg" width="100%" id="label1_10" class="sapUiSmallMarginBegin"/>-->
+						<!--		</HBox>-->
+						<!--		<HBox>-->
+						<!--			<Label text="Lower value" width="100%" id="label1_11" class="sapUiLargeMarginEnd"/>-->
+						<!--			<Input width="100%" id="input1_5" class="sapUiMediumMarginEnd"/>-->
+						<!--			<Label text="mm Hg" width="100%" id="label1_12" class="sapUiSmallMarginBegin"/>-->
+						<!--		</HBox>-->
+								<!--					<f:SimpleForm id="SimpleFormDisplay354" minWidth="1024" maxContainerCols="2" editable="true" layout="ResponsiveGridLayout"-->
+								<!--	labelSpanL="3" labelSpanM="3" emptySpanL="4" emptySpanM="4" columnsL="2" columnsM="2">-->
+								<!--	<f:content>-->
+								<!--		<Label text="Type of Goal"/>-->
+								<!--		<Input id = "idPersNo"/>-->
+								<!--		<ComboBox id="cbox" valueState="None" name="Type of Goal" placeholder="Type of Goal">-->
+								<!--			<items>-->
+								<!--				<core:Item key="h" text="Happiness Goal"/>-->
+								<!--				<core:Item key="h" text="Fitness Goal"/>-->
+								<!--				<core:Item key="h" text="Nutrition Goal"/>-->
+								<!--			</items>-->
+								<!--		</ComboBox>-->
+								<!--		<Label text="Goal Name"/>-->
+								<!--		<Input id="idgoalname"/>-->
+								<!--	</f:content>-->
+								<!--</f:SimpleForm>-->
+						<!--	</content>-->
+						<!--</IconTabFilter>-->
+						<!--<IconTabFilter></IconTabFilter>-->
+						<IconTabFilter id="tab2" text="Personal Health" showAll="true">
+							<content>
+								<Label text="Do you have any of these symptoms?" width="100%" id="label2_1"/>
+								<HBox>
+									<CheckBox id="box2_1" name="None" text="None"/>
+									<CheckBox id="box2_2" name="Digestive Issues" text="Digestive Issues"/>
+									<CheckBox id="box2_3" name="Joint Pain" text="Joint Pain"/>
+								</HBox>
+								<HBox>
+									<CheckBox id="box2_4" name="Allergies" text="Allergies"/>
+									<CheckBox id="box2_5" name="Back Pain" text="Back Pain"/>
+									<CheckBox id="box2_6" name="Others" text="Others"/>
+								</HBox>
+								<Label text="Do you have any of these diseases?" width="100%" id="label2_2" class="sapUiMediumMarginTop"/>
+								<HBox>
+									<CheckBox id="box2_7" name="None" text="None"/>
+									<CheckBox id="box2_8" name="Cancer" text="Cancer"/>
+									<CheckBox id="box2_9" name="Asthama" text="Asthama"/>
+								</HBox>
+								<HBox>
+									<CheckBox id="box2_10" name="Stroke" text="Stroke"/>
+									<CheckBox id="box2_11" name="Thyroid" text="Thyroid"/>
+									<CheckBox id="box2_12" name="Heart Problems" text="Heart Problems"/>
+								</HBox>
+							</content>
+						</IconTabFilter>
+						<IconTabFilter id="tab3" text="Family Health" showAll="true">
+							<content>
+								<Label text="Do any of your blood relations have these problems?" width="100%" id="label3_1"/>
+								<HBox>
+									<CheckBox id="box3_1" name="None" text="None"/>
+									<CheckBox id="box3_2" name="Heart Attack" text="Heart Attack"/>
+								</HBox>
+								<HBox>
+									<CheckBox id="box3_3" name="Anxiety" text="Anxiety"/>
+									<CheckBox id="box3_4" name="Arthritis" text="Arthritis"/>
+								</HBox>
+								<HBox>
+									<CheckBox id="box3_5" name="Cancer" text="Cancer"/>
+									<CheckBox id="box3_6" name="Obesity" text="Obesity"/>
+								</HBox>
+								<HBox>
+									<CheckBox id="box3_7" name="Diabetes" text="Diabetes"/>
+									<CheckBox id="box3_8" name="High Blood Pressure" text="High Blood Pressure"/>
+								</HBox>
+							</content>
+						</IconTabFilter>
+						<IconTabFilter text="Lab Parameters" showAll="true" id="tab4">
+							<Label text="Diabetic Profile [Please enter your diabetic profile details of the last six months]" width="100%" id="label4_1"
+								class="sapUiSmallMarginBottom"/>
+							<HBox>
+								<Label text="Do you know your sugar level?" width="100%" id="label4_2"/>
+								<RadioButton text="Yes" id="button4_1"/>
+								<RadioButton text="No" id="button4_2"/>
+							</HBox>
+							<HBox>
+								<Label text="Fasting Blood Sugar" width="100%" id="label4_3" class="sapUiLargeMarginEnd"/>
+								<Input width="100%" id="input4_1" class="sapUiMediumMarginEnd"/>
+								<Label text="mg/dL" width="100%" id="label4_4" class="sapUiSmallMarginBegin"/>
+							</HBox>
+							<HBox>
+								<Label text="Blood Sugar (PP/PG)" width="100%" id="label4_5" class="sapUiLargeMarginEnd"/>
+								<Input width="100%" id="input4_2" class="sapUiMediumMarginEnd"/>
+								<Label text="mg/dL" width="100%" id="label4_6" class="sapUiSmallMarginBegin"/>
+							</HBox>
+							<Label text="Lipid Profile [Please enter your lipid profile details of the last six months]" width="100%" id="label4_7"
+								class="sapUiSmallMarginTopBottom"/>
+							<HBox>
+								<Label text="Do you know your lipid numbers?" width="100%" id="label4_8"/>
+								<RadioButton text="Yes" id="button4_3"/>
+								<RadioButton text="No" id="button4_4"/>
+							</HBox>
+							<HBox>
+								<Label text="Total Cholesterol" width="100%" id="label4_9" class="sapUiLargeMarginEnd"/>
+								<Input width="100%" id="input4_3" class="sapUiMediumMarginEnd"/>
+								<Label text="mg/dL" width="100%" id="label4_10" class="sapUiSmallMarginBegin"/>
+							</HBox>
+							<HBox>
+								<Label text="HDL Cholesterol" width="100%" id="label4_11" class="sapUiLargeMarginEnd"/>
+								<Input width="100%" id="input4_4" class="sapUiMediumMarginEnd"/>
+								<Label text="mg/dL" width="100%" id="label4_12" class="sapUiSmallMarginBegin"/>
+							</HBox>
+							<HBox>
+								<Label text="LDL Cholesterol" width="100%" id="label4_13" class="sapUiLargeMarginEnd"/>
+								<Input width="100%" id="input4_5" class="sapUiMediumMarginEnd"/>
+								<Label text="mg/dL" width="100%" id="label4_14" class="sapUiSmallMarginBegin"/>
+							</HBox>
+						</IconTabFilter>
+						<IconTabFilter id="tab5" text="General Health" showAll="true">
+							<HBox>
+								<Label text="Do you excercise atleast for 30 minutes in morning and evening?" width="100%" id="label5_1"/>
+								<RadioButtonGroup columns="3" selectedIndex="2">
+									<buttons>
+										<RadioButton id="RB2-1" text="Always"/>
+										<RadioButton id="RB2-2" text="Sometimes"/>
+										<RadioButton id="RB2-3" text="Never"/>
+									</buttons>
+								</RadioButtonGroup>
+								<!--<RadioButton id="button5_1"/>-->
+								<!--<RadioButton id="button5_2"/>-->
+								<!--<RadioButton id="button5_3"/>-->
+								<!--<RadioButtonGroup columns="5" valueState="Error" class="sapUiMediumMarginBottom">-->
+								<!--	<buttons>-->
+								<!--		<RadioButton id="RB3-1" text="Option 1"/>-->
+								<!--		<RadioButton id="RB3-2" text="Option 2"/>-->
+								<!--		<RadioButton id="RB3-3" text="Option 3"/>-->
+								<!--	</buttons>-->
+								<!--</RadioButtonGroup>-->
+							</HBox>
+							<HBox>
+								<Label text="Do you have one serving of raw fruits/vegetables in the meal everyday?" width="100%" id="label5_2"/>
+								<!--<RadioButton id="button5_4"/>-->
+								<!--<RadioButton id="button5_5"/>-->
+								<!--<RadioButton id="button5_6"/>-->
+								<RadioButtonGroup columns="3" selectedIndex="2">
+									<buttons>
+										<RadioButton id="RB2-12" text="Always"/>
+										<RadioButton id="RB2-22" text="Sometimes"/>
+										<RadioButton id="RB2-32" text="Never"/>
+									</buttons>
+								</RadioButtonGroup>
+							</HBox>
+							<HBox>
+								<Label text="Do you feel that you have a good balance between your work and family life?" width="100%" id="label5_3"/>
+								<!--<RadioButton id="button5_7"/>-->
+								<!--<RadioButton id="button5_8"/>-->
+								<!--<RadioButton id="button5_9"/>-->
+								<RadioButtonGroup columns="3" selectedIndex="2">
+									<buttons>
+										<RadioButton id="RB2-13" text="Always"/>
+										<RadioButton id="RB2-23" text="Sometimes"/>
+										<RadioButton id="RB2-33" text="Never"/>
+									</buttons>
+								</RadioButtonGroup>
+							</HBox>
+							<HBox>
+								<Label text="Do you spend &gt; 8 hours infront of PC/Laptop?" width="100%" id="label5_4"/>
+								<!--<RadioButton id="button5_10"/>-->
+								<!--<RadioButton id="button5_11"/>-->
+								<!--<RadioButton id="button5_12"/>-->
+								<RadioButtonGroup columns="3" selectedIndex="2">
+									<buttons>
+										<RadioButton id="RB2-14" text="Always"/>
+										<RadioButton id="RB2-24" text="Sometimes"/>
+										<RadioButton id="RB2-34" text="Never"/>
+									</buttons>
+								</RadioButtonGroup>
+							</HBox>
+							<HBox>
+								<Label text="Do you work in shifts?" width="100%" id="label5_5"/>
+								<!--<RadioButton id="button5_13"/>-->
+								<!--<RadioButton id="button5_14"/>-->
+								<!--<RadioButton id="button5_15"/>-->
+								<RadioButtonGroup columns="3" selectedIndex="2">
+									<buttons>
+										<RadioButton id="RB2-15" text="Always"/>
+										<RadioButton id="RB2-25" text="Sometimes"/>
+										<RadioButton id="RB2-35" text="Never"/>
+									</buttons>
+								</RadioButtonGroup>
+							</HBox>
+							<HBox>
+								<Label text="Do you look forward to go to work and does it excite you?" width="100%" id="label5_6"/>
+								<!--<RadioButton id="button5_16"/>-->
+								<!--<RadioButton id="button5_17"/>-->
+								<!--<RadioButton id="button5_18"/>-->
+								<RadioButtonGroup columns="3" selectedIndex="2">
+									<buttons>
+										<RadioButton id="RB2-16" text="Always"/>
+										<RadioButton id="RB2-26" text="Sometimes"/>
+										<RadioButton id="RB2-36" text="Never"/>
+									</buttons>
+								</RadioButtonGroup>
+							</HBox>
+							<HBox>
+								<Label text="Do you smoke/ drink alcohol?" width="100%" id="label5_7"/>
+								<!--<RadioButton id="button5_19"/>-->
+								<!--<RadioButton id="button5_20"/>-->
+								<!--<RadioButton id="button5_21"/>-->
+								<RadioButtonGroup columns="3" selectedIndex="2">
+									<buttons>
+										<RadioButton id="RB2-17" text="Always"/>
+										<RadioButton id="RB2-27" text="Sometimes"/>
+										<RadioButton id="RB2-37" text="Never"/>
+									</buttons>
+								</RadioButtonGroup>
+							</HBox>
+						</IconTabFilter>
+						<IconTabFilter id="tab6" text="Check-ups" showAll="true">
+							<Label text="When was the last time you had the below check-ups done?" width="100%" id="label6_1" class="sapUiMediumMarginBottom"/>
+							<HBox>
+								<Label text="General Health Check-up" width="100%" id="label6_2"/>
+								<!--<RadioButton id="button6_1"/>-->
+								<!--<RadioButton id="button6_2"/>-->
+								<!--<RadioButton id="button6_3"/>-->
+								<RadioButtonGroup columns="3" selectedIndex="2">
+									<buttons>
+										<RadioButton id="RB2-18" text="Always"/>
+										<RadioButton id="RB2-28" text="Sometimes"/>
+										<RadioButton id="RB2-38" text="Never"/>
+									</buttons>
+								</RadioButtonGroup>
+							</HBox>
+							<HBox>
+								<Label text="Lipid/Total Cholesterol" width="100%" id="label6_3"/>
+								<!--<RadioButton id="button6_4"/>-->
+								<!--<RadioButton id="button6_5"/>-->
+								<!--<RadioButton id="button6_6"/>-->
+								<RadioButtonGroup columns="3" selectedIndex="2">
+									<buttons>
+										<RadioButton id="RB2-19" text="Always"/>
+										<RadioButton id="RB2-29" text="Sometimes"/>
+										<RadioButton id="RB2-39" text="Never"/>
+									</buttons>
+								</RadioButtonGroup>
+							</HBox>
+							<HBox>
+								<Label text="Eye Check-up" width="100%" id="label6_4"/>
+								<!--<RadioButton id="button6_7"/>-->
+								<!--<RadioButton id="button6_8"/>-->
+								<!--<RadioButton id="button6_9"/>-->
+								<RadioButtonGroup columns="3" selectedIndex="2">
+									<buttons>
+										<RadioButton id="RB3-1" text="Always"/>
+										<RadioButton id="RB3-2" text="Sometimes"/>
+										<RadioButton id="RB3-3" text="Never"/>
+									</buttons>
+								</RadioButtonGroup>
+							</HBox>
+							<HBox>
+								<Label text="Dental Check-up" width="100%" id="label6_5"/>
+								<!--<RadioButton id="button6_10"/>-->
+								<!--<RadioButton id="button6_11"/>-->
+								<!--<RadioButton id="button6_12"/>-->
+								<RadioButtonGroup columns="3" selectedIndex="2">
+									<buttons>
+										<RadioButton id="RB3-4" text="Always"/>
+										<RadioButton id="RB3-5" text="Sometimes"/>
+										<RadioButton id="RB3-6" text="Never"/>
+									</buttons>
+								</RadioButtonGroup>
+							</HBox>
+						</IconTabFilter>
+					</items>
+				</IconTabBar>
+				<sap.m.semantic:addAction>
+					<sap.m.semantic:AddAction tooltip="Add" id="action0" press="onAdd"/>
+				</sap.m.semantic:addAction>
+				<sap.m.semantic:saveAction><sap.m.semantic:SaveAction id="save" press="onSave"/>
+				</sap.m.semantic:saveAction>
+			</sap.m.semantic:MasterPage>
+		</pages>
+	</App>
+</core:View>

@@ -1,0 +1,9 @@
+<mvc:View controllerName="successhealth.SuccessHealth01.controller.Discussion" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m">
+	<Page id="discuss" title="Discussion Forum" showNavButton="true" navButtonPress="onNavBack">
+		<FeedInput post="onPost" icon="" class="sapUiSmallMarginTopBottom"/>
+		<List showSeparators="Inner" items="{model3>/EntryCollection}">
+			<FeedListItem sender="{model3>Author}" senderPress="onSenderPress" iconPress="onIconPress" iconDensityAware="false" info="{model3>Type}"
+				timestamp="{model3>Date}" text="{model3>Text}" convertLinksToAnchorTags="All"/>
+		</List>
+	</Page>
+</mvc:View>

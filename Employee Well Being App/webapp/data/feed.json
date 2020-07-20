@@ -1,0 +1,18 @@
+{
+	"EntryCollection" : [{
+		"Author" : "Akhila Gadagkar",
+		"Type" : "Info",
+		"Date" : "September 02 2018",
+		"Text" : "IFL starts from tomorrow. Kindly talk to your team captains to sync data with Fit@SAP"
+	}, {
+		"Author" : "Jatin Nijhawan",
+		"Type" : "Reply",
+		"Date" : "September 01 2018",
+		"Text" : "Yes Ekta. You can do that"
+	}, {
+		"Author" : "Ekta Bharti",
+		"Type" : "Request",
+		"Date" : "August 30 2018",
+		"Text" : "Can we connect Fit@SAP to Nokia Health Mate app in Android?"
+	}]
+} 
